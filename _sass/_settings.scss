@@ -1,0 +1,31 @@
+
+// Settings
+
+
+// Colors
+$white: #fff;
+$black: #000;
+$bg: #efefef;
+$base_type: 16px;
+
+
+// Type
+
+$serif: Times, serif;
+$sans: 'Poppins', Arial, sans-serif;
+$guide-type: "Roboto Mono", monospace;
+$base_color: $black;
+
+
+
+// - - - - - - - - - - - - -
+
+body{
+  color: $base_color;
+  font-size: $base_type;
+  font-family: $serif;
+  background-color: $bg;
+}
+body.guide-page{
+  font-family: $guide-type;
+}

@@ -1,0 +1,8 @@
+- name: Now
+  path: /now/
+
+- name: About
+  path: /about/
+
+- name: Subscribe
+  path: /subscribe/
