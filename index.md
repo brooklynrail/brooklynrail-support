@@ -8,4 +8,14 @@ layout: home
 
 ## Support the Rail
 
-The Brooklyn Rail is enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+> _What would we do without it — Nancy Spero_
+
+The Brooklyn Rail is an essential voice in independent journalism. In our eighteen years we have never wavered in our commitment to FREE DISTRIBUTION; THE CREATIVE LABOR OF ARTISTS AND WRITERS; AND REFLECTING THE DIVERSITY, COMPLEXITY, AND INVENTIVENESS OF OUR CULTURAL LANDSCAPE.
+
+We reach over fifty thousand readers monthly, who pick up the Rail in print around the city or read the Rail online. In order to bring rigorous, imaginative writing into the hands of the public each month, we depend on individual donations from our readers. At this critical juncture, we are asking for your support to keep the Rail alive.
+
+Each copy of the Rail costs $8 to produce and print.
+Please donate $1 a month for the year today!
+
+[BUTTON]
