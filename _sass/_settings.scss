@@ -24,12 +24,12 @@ $base_color: $black;
 body{
   color: $base_color;
   font-size: $base_type;
-  font-family: $serif;
+  font-family: $sans;
   background-color: $bg;
 }
 
 .paper{
-  margin: 15px 0;
+  // margin: 15px 0;
 }
 .container{
   padding-top: 20px;
