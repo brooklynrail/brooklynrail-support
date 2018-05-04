@@ -6,3 +6,6 @@
 
 - name: Subscribe
   path: /subscribe/
+
+- name: Advertise
+  path: /advertise/
