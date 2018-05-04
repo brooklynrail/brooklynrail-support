@@ -1,7 +1,7 @@
-- name: Now
-  path: /now/
+- name: Current Issue
+  path: https://brooklynrail.org/
 
-- name: About
+- name: About the Rail
   path: /about/
 
 - name: Subscribe

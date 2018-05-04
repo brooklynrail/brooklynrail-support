@@ -11,9 +11,10 @@ $base_type: 16px;
 
 // Type
 
-$serif: Times, serif;
-$sans: 'Poppins', Arial, sans-serif;
-$guide-type: "Roboto Mono", monospace;
+
+$serif: 'EB Garamond', serif;
+$sans: 'Libre Franklin', sans-serif;
+$mono: 'Roboto Mono', sans-serif;
 $base_color: $black;
 
 
@@ -26,6 +27,12 @@ body{
   font-family: $serif;
   background-color: $bg;
 }
-body.guide-page{
-  font-family: $guide-type;
+
+.paper{
+  margin: 15px 0;
+}
+.container{
+  padding-top: 20px;
+  max-width: 800px;
+  background: #fff;
 }
