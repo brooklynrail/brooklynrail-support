@@ -5,15 +5,7 @@
 layout: home
 ---
 
-
-## Support the Rail
-
-<button type="button" class="btn btn-primary">Donate</button>
-
-> _What would we do without it — Nancy Spero_
-
-
-**The _Brooklyn Rail_ is an essential voice in independent journalism.**
+## The _Brooklyn Rail_ is an essential voice in independent journalism.
 
 In our eighteen years we have never wavered in our commitment to free distribution; the creative labor of artists and writers; and reflecting the diversity, complexity, and inventiveness of our cultural landscape.
 
