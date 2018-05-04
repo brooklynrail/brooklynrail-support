@@ -11,11 +11,18 @@ layout: home
 
 > _What would we do without it — Nancy Spero_
 
-The Brooklyn Rail is an essential voice in independent journalism. In our eighteen years we have never wavered in our commitment to FREE DISTRIBUTION; THE CREATIVE LABOR OF ARTISTS AND WRITERS; AND REFLECTING THE DIVERSITY, COMPLEXITY, AND INVENTIVENESS OF OUR CULTURAL LANDSCAPE.
+**The Brooklyn Rail is an essential voice in independent journalism.**
 
-We reach over fifty thousand readers monthly, who pick up the Rail in print around the city or read the Rail online. In order to bring rigorous, imaginative writing into the hands of the public each month, we depend on individual donations from our readers. At this critical juncture, we are asking for your support to keep the Rail alive.
+In our eighteen years we have never wavered in our commitment to <span class="highlight">free distribution; the creative labor of artists and writers; and reflecting the diversity, complexity, and inventiveness of our cultural landscape.
 
-Each copy of the Rail costs $8 to produce and print.
-Please donate $1 a month for the year today!
+**Over the past 18 years, we have distributed the Rail monthly to New York and the World**
+We reach over fifty thousand readers monthly, who pick up the Rail in print around the city or read the Rail online. In order to bring rigorous, imaginative writing into the hands of the public each month, we depend on individual donations from our readers. At this critical juncture, we are asking for your support to keep the Rail free for artists and lovers of art everywhere.
+
+**We need your help to continue this work**
+ASK Please donate $1 a month for the year today!
 
 [BUTTON]
+
+---
+
+[Sign up for the newsletter]
