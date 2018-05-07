@@ -2,11 +2,11 @@
   <div class="container">
 
     <div class="row">
-      <div class="col">
+      <div class="col-sm-12">
         {% if page.layout == 'post' %}
-          <h2 id="logo" class="m0"><a href="{{ site.baseurl }}" title="{{ site.title }}">{% include rail.svg %}</a></h2>
+          <h2 id="logo"><a href="{{ site.baseurl }}" title="{{ site.title }}">{% include rail.svg %}</a></h2>
         {% else %}
-          <h1 id="logo" class="m0"><a href="{{ site.baseurl }}" title="{{ site.title }}">{% include rail.svg %}</a></h1>
+          <h1 id="logo"><a href="{{ site.baseurl }}" title="{{ site.title }}">{% include rail.svg %}</a></h1>
         {% endif %}
       </div>
     </div>

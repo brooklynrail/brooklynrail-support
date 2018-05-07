@@ -4,9 +4,14 @@
 
 nav{
   font-family: $sans;
-  font-weight: 800;
-  a{
+  font-weight: 400;
+  font-size: 20px;
+  // text-align: center;
+  a.nav-link{
+    padding-left: 0;
+    padding-right: 0;
     text-decoration: none;
     color: $black;
+    // text-align: center;
   }
 }
