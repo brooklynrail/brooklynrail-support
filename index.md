@@ -13,6 +13,8 @@ We reach over fifty thousand readers monthly, who pick up the _Rail_ in print or
 
 At this critical juncture, we are asking for your support to keep the _Rail_ free for artists and lovers of art everywhere.
 
+**The Brooklyn Rail is a nonprofit 501(c)(3) organization, and your donation is fully deductible.**
+
 ---
 
 We need your support to continue this work.
