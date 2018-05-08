@@ -32,11 +32,20 @@ body{
   // margin: 15px 0;
 }
 .container{
-  max-width: 700px;
+  max-width: 960px;
 }
+
+
 
 #donate-prompt{
   button{
     font-size: 30px;
+  }
+}
+
+#donate{
+  #braintree{
+    background: red;
+    height:500px;
   }
 }

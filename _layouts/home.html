@@ -2,30 +2,18 @@
 layout: default
 ---
 
-<section id="donate-prompt">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-
-        <button type="button" class="btn btn-primary btn-lg btn-block">Donate</button>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-{% include quote-box.html %}
-
 <article>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 col-md-8">
 
         <div class="entry-content">
           {{ content }}
         </div>
 
+      </div>
+      <div class="col-sm-12 col-md-4">
+        {% include quote-box.html %}
       </div>
     </div>
   </div>
@@ -39,7 +27,11 @@ layout: default
 
         We need your support to continue this work.
 
-        [BUTTON]
+        <div id="braintree">
+          Embed goes here!
+        </div>
+
+
 
       </div>
     </div>

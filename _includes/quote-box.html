@@ -1,13 +1,5 @@
-<section id="quote-box">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-
-        {% for q in site.data.quotes %}
-        <div class="quote">&#8220;{{ q.quote }}&#8221;<span>— {{ q.name }}</span></div>
-        {% endfor %}
-
-      </div>
-    </div>
-  </div>
-</section>
+<div id="quote-box">
+  {% for q in site.data.quotes %}
+  <div class="quote">&#8220;{{ q.quote }}&#8221;<span>— {{ q.name }}</span></div>
+  {% endfor %}
+</div>

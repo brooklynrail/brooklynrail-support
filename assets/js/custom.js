@@ -21,13 +21,13 @@
     }, 4000);
 
     // Determine which is the tallest of the .quote and set all the rest to that same height
-    // var maxHeight = -1;
-    // $('#quote-box .quote').each(function() {
-    //   maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
-    // });
-    // $('#quote-box .quote').each(function() {
-    //   $(this).height(maxHeight);
-    // });
+    var maxHeight = -1;
+    $('#quote-box .quote').each(function() {
+      maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+    });
+    $('#quote-box .quote').each(function() {
+      $(this).height(maxHeight);
+    });
 
   });
 })(jQuery);

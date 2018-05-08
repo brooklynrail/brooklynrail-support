@@ -2,19 +2,22 @@
 // Quote Box
 
 #quote-box{
-  margin: 40px 0 50px 0;
-  // margin: 20px auto 20px auto;
-  // background: #ffafaf;
+  border-top: 2px #000 dotted;
+  padding: 10px 15px 0 15px;
   .quote{
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
-    // color: #005af2;
+    line-height: 40px;
+    text-indent: -13px;
     display: none;
+    color: #056ffb;
     span{
+      margin-top: 20px;
       display: block;
       text-align: right;
-      font-size: 18px;
+      font-size: 16px;
+      line-height: 24px;
       font-weight: 400;
       font-style: normal;
     }
@@ -29,12 +32,12 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  #quote-box .quote{
-    font-size: 36px;
-    span{
-      font-size: 20px;
-    }
-  }
+  // #quote-box .quote{
+  //   font-size: 36px;
+  //   span{
+  //     font-size: 20px;
+  //   }
+  // }
 }
 
 // Large devices (desktops, 992px and up)
