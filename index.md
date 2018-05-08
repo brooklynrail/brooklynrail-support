@@ -5,7 +5,7 @@
 layout: home
 ---
 
-### Support an essential voice in independent journalism
+### Support independent journalism
 
 In our eighteen years we have never wavered in our commitment to free distribution; the creative labor of artists and writers; and reflecting the diversity, complexity, and inventiveness of our cultural landscape.
 
