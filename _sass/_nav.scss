@@ -8,11 +8,13 @@ nav{
   font-size: 20px;
   // text-align: center;
   a.nav-link{
-    padding-left: 0;
-    padding-right: 0;
+    border: 1px dotted #000;
     text-decoration: none;
     color: $black;
     // text-align: center;
+  }
+  a.nav-link:first-child{
+    margin-right: 17px;
   }
   .active{}
 }
