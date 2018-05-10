@@ -3,12 +3,12 @@
 
     // A minimal slideshow for the #quote-box
     var currentIndex = 0,
-    items = $('#quote-box .quote'),
+    items = $('#quote-frame .quote'),
     itemAmt = items.length;
-    $('#quote-box .quote:first-child').addClass('active');
+    $('#quote-frame .quote:first-child').addClass('active');
 
     function cycleItems() {
-      var item = $('#quote-box .quote').eq(currentIndex);
+      var item = $('#quote-frame .quote').eq(currentIndex);
       items.removeClass('active');
       item.addClass('active');
     }
@@ -22,12 +22,11 @@
 
     // Determine which is the tallest of the .quote and set all the rest to that same height
     var maxHeight = -1;
-    $('#quote-box .quote').each(function() {
+    $('#quote-frame .quote').each(function() {
       maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
     });
-    $('#quote-box .quote').each(function() {
-      $(this).height(maxHeight);
-    });
+    var qb = $('#quote-frame .paper');
+    $(qb).height(maxHeight);
 
   });
 })(jQuery);

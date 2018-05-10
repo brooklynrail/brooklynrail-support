@@ -44,17 +44,18 @@ body{
 }
 
 #donate{
-  margin-bottom: 40px;
+  margin: 40px 0;
   #braintree{
-    border: 10px solid red;
-    height:500px;
+    img{
+      width: 100%;
+    }
     vertical-align: middle;
     text-align: center;
     p{
       padding-top: 200px;
       font-weight: 900;
       font-size: 40px;
-      color: red;
+      color: #ccc;
     }
   }
 }
