@@ -5,7 +5,7 @@
 layout: home
 ---
 
-### Support independent journalism
+### Keep _the Rail_ free and independent
 
 In our eighteen years we have never wavered in our commitment to free distribution; the creative labor of artists and writers; and reflecting the diversity, complexity, and inventiveness of our cultural landscape.
 
