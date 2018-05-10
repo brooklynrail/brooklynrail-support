@@ -1,0 +1,17 @@
+footer{
+  padding: 40px 0;
+  .nav{
+    text-align: center;
+    display: inherit;
+    font-weight: 600;
+    a{
+      color: #000;
+      margin: 0 10px;
+    }
+    a:hover{
+      border-bottom: #000 2px solid;
+      text-decoration: none;
+    }
+  }
+
+}

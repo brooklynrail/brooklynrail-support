@@ -1,4 +1,15 @@
-<footer class="w-100 pa3 bg-light-green">
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="nav">
+          {% for nav in site.data.footer %}
+            <a href="{{ nav.path }}?=support">{{ nav.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script
