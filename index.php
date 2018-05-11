@@ -35,7 +35,7 @@ $app->post('/', function () use ($app, $gateway) {
     ]);
 
     if($result->success || $result->transaction) {
-        $app->redirect('/checkouts/' . $result->transaction->id);
+        $app->redirect('/' . $result->transaction->id);
     } else {
         $errorString = "";
 
@@ -44,7 +44,7 @@ $app->post('/', function () use ($app, $gateway) {
         }
 
         $_SESSION["errors"] = $errorString;
-        $app->redirect('/checkouts');
+        $app->redirect('/');
     }
 });
 
