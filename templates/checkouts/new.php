@@ -7,7 +7,7 @@
 <section id="donate">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 col-md-8">
 
         <!-- Start Braintree -->
         <div class="wrapper">
