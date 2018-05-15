@@ -27,6 +27,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="assets/js/popup.js"></script>
     <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.min.js"></script>
     <script>
       var form = document.querySelector('#payment-form');

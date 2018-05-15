@@ -1,0 +1,115 @@
+#support_popup .popup-overlay{
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+#support_popup .popup-close{
+  color: #efefef;
+  text-align: right;
+  font-weight: 600;
+  cursor: pointer;
+  width: 75px;
+  text-transform: uppercase;
+  float: right;
+  padding: 10px;
+  position: relative;
+  right:-7;
+  top:6;
+  font-size: 16px;
+}
+#support_popup .popup-close:hover{
+  color: #fff;
+}
+
+#support_popup .popup-frame{
+  width: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 100;
+}
+
+#support_popup .paper{
+  border:10px #000 solid;
+  padding: 25px;
+  clear: both;
+  background: #350771;
+  background: -moz-linear-gradient(top, #350771 50%, #f85032 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(50%, #350771), color-stop(100%, #f85032));
+  background: -webkit-linear-gradient(top, #350771 50%, #f85032 100%);
+  background: -o-linear-gradient(top, #350771 50%, #f85032 100%);
+  background: -ms-linear-gradient(top, #350771 50%, #f85032 100%);
+  background: linear-gradient(to bottom, #350771 50%, #f85032 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#350771', endColorstr='#f85032', GradientType=0);
+}
+
+#support_popup .popup{
+  color: #fff;
+}
+
+#support_popup .popup .quote{
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 36px;
+  text-indent: -10px;
+}
+
+#support_popup .popup .quote span {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: block;
+  text-indent: -10px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+}
+#support_popup .popup .msg{
+  margin-top: 30px;
+  padding: 30px 0 0 0;
+  font-weight: 200;
+  font-size: 30px;
+  text-transform: uppercase;
+  border-top:1px solid #fff;
+}
+#support_popup .popup .msg strong{
+  font-weight: 700;
+}
+#support_popup .popup button{
+  border: 1px #fff solid;
+  border-radius: 3px;
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+}
+#support_popup .popup button:hover{
+  background: rgba(255, 255, 255, .2);
+}
+
+@media (min-width: 768px) {
+  #support_popup .popup-frame{
+    width: 44%;
+    position: absolute;
+    top: 15%;
+    left: 28%;
+    z-index: 100;
+  }
+  #support_popup .paper{
+    border:10px #000 solid;
+    padding: 40px 45px;
+  }
+  #support_popup .popup .quote{
+    font-size: 36px;
+    line-height: 48px;
+    text-indent: -13px;
+  }
+  #support_popup .popup .quote span {
+    text-indent: -18px;
+  }
+}
