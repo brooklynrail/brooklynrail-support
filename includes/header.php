@@ -10,18 +10,7 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <nav class="nav">
-
-          <a class="nav-link" href="#">Current Issue</a>
-
-          <a class="nav-link" href="#">About the Rail</a>
-
-        </nav>
-
-      </div>
-    </div>
+    <?php require_once("includes/nav.php"); ?>
 
     <?php if(isset($_SESSION["errors"])) : ?>
       <div class="row">
