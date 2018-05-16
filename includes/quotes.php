@@ -8,5 +8,5 @@
     <div class="quote">&#8220;If it wasn't for the Rail, the city would be a desert.&#8221;<span>— Alex Katz, Artist</span></div>
 
   </div>
-  <a href="mailto:manager@brooklynrail.org" class="quote-submit">submit a quote</a>
+  <a href="mailto:manager@brooklynrail.org?subject=BROOKLYN%20RAIL%20Quote&body=-----%0AThank%20you%20for%20supporting%20free%20and%20independent%20publishing!%0Ahttps%3A%2F%2Fbrooklynrail.org%2Fsupport%0A-----" class="quote-submit">submit a quote</a>
 </div>
