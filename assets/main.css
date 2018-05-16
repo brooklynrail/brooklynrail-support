@@ -149,8 +149,7 @@ pre code {
 #quote-frame .paper {
   padding: 10px 15px 0 15px;
   padding: 30px 40px 40px 40px;
-  color: #daf0f0;
-  background: #350771;
+  color: #fff;
   background: #350771;
   background: -moz-linear-gradient(top, #350771 50%, #f85032 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(50%, #350771), color-stop(100%, #f85032));

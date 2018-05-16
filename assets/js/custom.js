@@ -28,5 +28,10 @@
     var qb = $('#quote-frame .paper');
     $(qb).height(maxHeight);
 
+    // popup JS
+    $( ".popup-close" ).click(function() {
+      $("#support_popup").hide();
+    });
+
   });
 })(jQuery);
