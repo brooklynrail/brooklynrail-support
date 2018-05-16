@@ -136,6 +136,23 @@ pre code {
   padding: 0;
 }
 
+
+#payment-form .input-label{
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+#payment-form .amount-wrapper{
+  margin-bottom: 15px;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+#payment-form .amount-wrapper input{
+  border:1px #333 solid;
+  padding: 3px 10px;
+  font-size: 1.5rem;
+}
+
 #quote-frame .quote-submit {
   padding: 3px 7px 4px 7px;
   color: #000;
