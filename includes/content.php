@@ -4,7 +4,7 @@
       <div class="col-sm-12 col-md-7">
 
         <div class="entry-content">
-          <h3 id="keep-the-rail-free-and-independent">Keep <em>the Rail</em> free and independent</h3>
+          <h3 id="keep-the-rail-free-and-independent">Keep <em>the Rail</em> alive and free</h3>
 
           <p>In our eighteen years we have never wavered in our commitment to free distribution; the creative labor of artists and writers; and reflecting the diversity, complexity, and inventiveness of our cultural landscape.</p>
 
