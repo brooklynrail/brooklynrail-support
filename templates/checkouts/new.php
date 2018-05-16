@@ -39,10 +39,7 @@
 
 <?php require_once("includes/newsletter.php"); ?>
 
-<?php require_once("includes/popup.php"); ?>
-
 <?php require_once("includes/footer.php"); ?>
-
 
 </body>
 </html>
