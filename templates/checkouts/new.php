@@ -15,7 +15,7 @@
             <form method="post" id="payment-form" action="/">
               <section>
                 <label for="amount">
-                  <span class="input-label">I can give $10, $25, $50 +</span>
+                  <span class="input-label">Give $10, $25, $50 +</span>
                   <div class="input-wrapper amount-wrapper">
                     <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="$25">
                   </div>
