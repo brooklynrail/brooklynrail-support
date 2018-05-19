@@ -43,7 +43,7 @@ jobs:
       steps:
         - run:
             name: Deploy Over SSH
-            command: scp -r brooklynrail/brooklynrail-support/* $SSH_USER@$SSH_HOST:/public_html/jeremy/bk/
+            command: scp -r id_rsa -o "IdentitiesOnly yes" sbrooklynrail/brooklynrail-support/* $SSH_USER@$SSH_HOST:/public_html/jeremy/bk/
 
 
 workflows:
