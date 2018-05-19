@@ -37,19 +37,15 @@ jobs:
   #     - run: php -S 0.0.0.0:3000
   #     - run: phpunit
 
-  # deploy:
-  #     machine:
-  #       enabled: true
-  #     steps:
-  #       - run:
-  #           name: Deploy Over SSH
-  #           command: |
-  #             ssh $SSH_USER@$SSH_HOST "<remote deploy command>"
-deployment:
-  production:
-    branch: master
-    commands:
-      - scp -r brooklynrail/brooklynrail-support/* $SSH_USER@$SSH_HOST:/public_html/jeremy/bk/
+  deploy:
+      machine:
+        enabled: true
+      steps:
+        - run:
+            name: Deploy Over SSH
+            branch: master
+            command: |
+              scp -r brooklynrail/brooklynrail-support/* $SSH_USER@$SSH_HOST:/public_html/jeremy/bk/
 
 workflows:
   version: 2
