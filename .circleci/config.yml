@@ -4,47 +4,52 @@
 #
 version: 2
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8.10-browsers
+  # build:
+  #   docker:
+  #     # specify the version you desire here
+  #     - image: circleci/node:8.10-browsers
+  #
+  #     # Specify service dependencies here if necessary
+  #     # CircleCI maintains a library of pre-built images
+  #     # documented at https://circleci.com/docs/2.0/circleci-images/
+  #     # - image: circleci/mysql:9.4
+  #
+  #   # working_directory: ~/repo
+  #
+  #   steps:
+  #     - checkout
+  #
+  #     # Download and cache dependencies
+  #     # - restore_cache:
+  #         # keys:
+  #         # - v1-dependencies-{{ checksum "composer.json" }}
+  #         # fallback to using the latest cache if no exact match is found
+  #         # - v1-dependencies-
+  #
+  #     - run:
+  #         name: install php
+  #         command: curl -sS https://getcomposer.org/installer
+  #     - run:
+  #         name: install composer
+  #         command: php composer.phar install
+  #
+  #     # run tests!
+  #     - run: php -S 0.0.0.0:3000
+  #     - run: phpunit
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mysql:9.4
-
-    # working_directory: ~/repo
-
-    steps:
-      - checkout
-
-      # Download and cache dependencies
-      # - restore_cache:
-          # keys:
-          # - v1-dependencies-{{ checksum "composer.json" }}
-          # fallback to using the latest cache if no exact match is found
-          # - v1-dependencies-
-
-      - run:
-          name: install php
-          command: curl -sS https://getcomposer.org/installer | php
-      - run:
-          name: install composer
-          command: php composer.phar install
-          
-      # run tests!
-      - run: php -S 0.0.0.0:3000
-      - run: phpunit
-
-  deploy:
-      machine:
-        enabled: true
-      steps:
-        - run:
-            name: Deploy Over SSH
-            command: |
-              ssh $SSH_USER@$SSH_HOST "<remote deploy command>"
+  # deploy:
+  #     machine:
+  #       enabled: true
+  #     steps:
+  #       - run:
+  #           name: Deploy Over SSH
+  #           command: |
+  #             ssh $SSH_USER@$SSH_HOST "<remote deploy command>"
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp -r brooklynrail/brooklynrail-support/* $SSH_USER@$SSH_HOST:/public_html/jeremy/bk/
 
 workflows:
   version: 2
