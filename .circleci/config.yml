@@ -26,8 +26,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           # - v1-dependencies-
 
-      - run: php composer.phar install
-
+      - run:
+          name: install php
+          command: curl -sS https://getcomposer.org/installer | php
+      - run:
+          name: install composer
+          command: php composer.phar install
+          
       # run tests!
       - run: php -S 0.0.0.0:3000
       - run: phpunit
