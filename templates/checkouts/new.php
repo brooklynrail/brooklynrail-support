@@ -17,7 +17,7 @@
                 <label for="amount">
                   <span class="input-label">Give $10, $25, $50 +</span>
                   <div class="input-wrapper amount-wrapper">
-                    <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="$25">
+                    <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="25">
                   </div>
                 </label>
 
