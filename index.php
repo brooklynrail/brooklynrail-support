@@ -62,13 +62,13 @@ $app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway) {
      ];
 
     if (in_array($transaction->status, $transactionSuccessStatuses)) {
-        $header = "Sweet Success!";
+        $header = "Thank you!";
         $icon = "success";
-        $message = "Your test transaction has been successfully processed. See the Braintree API response and try again.";
+        $message = "Your donation toward the Brooklyn Rail been successfully processed.";
     } else {
-        $header = "Transaction Failed";
+        $header = "Ooops! Transaction Failed";
         $icon = "fail";
-        $message = "Your test transaction has a status of " . $transaction->status . ". See the Braintree API response and try again.";
+        $message = "Your transaction has a status of " . $transaction->status . ". Try again or e-mail us at manager@brooklynrail.org";
     }
 
     $app->render('checkouts/show.php', [
