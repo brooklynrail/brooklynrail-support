@@ -13,21 +13,19 @@
     <?php require_once("includes/nav.php"); ?>
 
     <?php if(isset($_SESSION["errors"])) : ?>
-      <div class="row">
-        <div class="col">
-          <div class="show notice error notice-error">
-            <span class="notice-message">
-              <?php
-              echo($_SESSION["errors"]);
-              unset($_SESSION["errors"]);
-              ?>
-              <span>
-              </div>
-            </div>
-          </div>
-        <?php endif; ?>
-
+    <div class="row">
+      <div class="col">
+        <div class="show notice error notice-error">
+          <span class="notice-message">
+            <?php
+            echo($_SESSION["errors"]);
+            unset($_SESSION["errors"]);
+            ?>
+          <span>
+        </div>
       </div>
-    </header>
-
-    <?php require_once("includes/content.php"); ?>
+    </div>
+    <?php endif; ?>
+    
+  </div>
+</header>

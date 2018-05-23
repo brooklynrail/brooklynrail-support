@@ -37,6 +37,13 @@ body {
   margin: 30px 0 0 0;
 }
 
+.response h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+.response .message{
+  font-size: 21px;
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
