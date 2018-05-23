@@ -2,7 +2,10 @@
 <html>
 <?php require_once("includes/head.php"); ?>
 <body>
+
 <?php require_once("includes/header.php"); ?>
+
+<?php require_once("includes/content.php"); ?>
 
 <section id="donate">
   <div class="container">

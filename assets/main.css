@@ -1,12 +1,14 @@
 body {
-  color: #000;
+  color: #010046;
   font-size: 16px;
   font-family: "Libre Franklin", sans-serif;
-  background-color: #fff;
+  background-color: #ff7171;
 }
 
 .container {
+  margin: 30px auto;
   max-width: 960px;
+  border:13px #010046 solid;
 }
 
 #donate-prompt button {
@@ -43,7 +45,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 #header {
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 #header #logo {
@@ -51,16 +53,17 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 #header svg #brooklynrail-logo path {
-  fill: red;
+  fill: #010046;
 }
 
-nav {
+.nav {
   padding: 10px 0;
   font-weight: 400;
   font-size: 20px;
+  display: none;
 }
 
-nav a.nav-link {
+.nav a.nav-link {
   text-decoration: none;
   color: #000;
   padding: 0;
@@ -69,8 +72,8 @@ nav a.nav-link {
   border-bottom: 2px #fff solid;
 }
 
-nav a.nav-link:first-child {}
-nav a.nav-link:hover{
+.nav a.nav-link:first-child {}
+.nav a.nav-link:hover{
   border-bottom: 2px #000 solid;
 }
 article header h1 {
@@ -103,10 +106,12 @@ article .entry-content h2 {
   font-size: 36px;
 }
 
-article .entry-content h3 {
-  font-size: 28px;
-  font-weight: 700;
+.entry-content h3 {
+  margin: 30px auto;
+  font-size: 6vw;
+  font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
 }
 
 article .entry-content h4 {
@@ -237,25 +242,25 @@ pre code {
   }
 }
 
-footer {
+#footer {
   padding: 30px 0;
   background: #000;
   color: #fff;
 }
 
-footer .nav {
+#footer .nav {
   text-align: center;
   display: inherit;
   font-weight: 600;
 }
 
-footer .nav a {
+#footer .nav a {
   color: #fff;
   margin: 6px 10px;
   display: inline-block;
 }
 
-footer .nav a:hover {
+#footer .nav a:hover {
   border-bottom: #fff 2px solid;
   text-decoration: none;
 }
