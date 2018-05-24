@@ -27,7 +27,7 @@ $app->get('/', function () use ($app, $gateway, $support_path) {
     ]);
 });
 
-$app->post('/', function () use ($app, $gateway) {
+$app->post('/', function () use ($app, $gateway, $support_path) {
 
     $result = $gateway->transaction()->sale([
         "amount" => $app->request->post('amount'),
@@ -51,7 +51,7 @@ $app->post('/', function () use ($app, $gateway) {
     }
 });
 
-$app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway) {
+$app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $support_path) {
     $transaction = $gateway->transaction()->find($transaction_id);
 
     $transactionSuccessStatuses = [
