@@ -8,6 +8,8 @@ $gateway = new Braintree_Gateway([
     'publicKey' => getenv('BT_PUBLIC_KEY'),
     'privateKey' => getenv('BT_PRIVATE_KEY')
 ]);
+$support_path = getenv('SUPPORT_PATH');
+
 $app = new \Slim\Slim();
 
 $app->config([
@@ -18,8 +20,9 @@ $app->config([
 //     $app->redirect('/checkouts/');
 // });
 
-$app->get('/', function () use ($app, $gateway) {
+$app->get('/', function () use ($app, $gateway, $support_path) {
     $app->render('checkouts/new.php', [
+        'support_path' => $support_path,
         'client_token' => $gateway->clientToken()->generate(),
     ]);
 });
@@ -35,7 +38,7 @@ $app->post('/', function () use ($app, $gateway) {
     ]);
 
     if($result->success || $result->transaction) {
-        $app->redirect('/support/' . $result->transaction->id);
+        $app->redirect("/$support_path" . $result->transaction->id);
     } else {
         $errorString = "";
 
@@ -44,7 +47,7 @@ $app->post('/', function () use ($app, $gateway) {
         }
 
         $_SESSION["errors"] = $errorString;
-        $app->redirect('/support/');
+        $app->redirect("/$support_path");
     }
 });
 

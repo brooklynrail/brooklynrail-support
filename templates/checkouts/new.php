@@ -1,4 +1,7 @@
-<?php $clientToken = $this->data["client_token"]; ?>
+<?php $clientToken = $this->data["client_token"]; 
+$supportPath = $this->data["support_path"];
+
+?>
 <html>
 <?php require_once("includes/head.php"); ?>
 <body>
