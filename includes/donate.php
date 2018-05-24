@@ -6,7 +6,7 @@
         <!-- Start Braintree -->
         <div class="wrapper">
           <div class="checkout">
-            <form method="post" id="payment-form" action="/">
+            <form method="post" id="payment-form" action="/support/">
               <section>
                 <label for="amount">
                   <span class="input-label">Give $10, $25, $50 +</span>
