@@ -8,6 +8,8 @@ $gateway = new Braintree_Gateway([
     'publicKey' => getenv('BT_PUBLIC_KEY'),
     'privateKey' => getenv('BT_PRIVATE_KEY')
 ]);
+$support_path = getenv('SUPPORT_PATH');
+
 $app = new \Slim\Slim();
 
 $app->config([
@@ -18,13 +20,14 @@ $app->config([
 //     $app->redirect('/checkouts/');
 // });
 
-$app->get('/', function () use ($app, $gateway) {
+$app->get('/', function () use ($app, $gateway, $support_path) {
     $app->render('checkouts/new.php', [
+        'support_path' => $support_path,
         'client_token' => $gateway->clientToken()->generate(),
     ]);
 });
 
-$app->post('/', function () use ($app, $gateway) {
+$app->post('/', function () use ($app, $gateway, $support_path) {
 
     $result = $gateway->transaction()->sale([
         "amount" => $app->request->post('amount'),
@@ -35,7 +38,7 @@ $app->post('/', function () use ($app, $gateway) {
     ]);
 
     if($result->success || $result->transaction) {
-        $app->redirect('/' . $result->transaction->id);
+        $app->redirect("/$support_path" . $result->transaction->id);
     } else {
         $errorString = "";
 
@@ -44,11 +47,11 @@ $app->post('/', function () use ($app, $gateway) {
         }
 
         $_SESSION["errors"] = $errorString;
-        $app->redirect('/');
+        $app->redirect("/$support_path");
     }
 });
 
-$app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway) {
+$app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $support_path) {
     $transaction = $gateway->transaction()->find($transaction_id);
 
     $transactionSuccessStatuses = [
@@ -62,13 +65,13 @@ $app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway) {
      ];
 
     if (in_array($transaction->status, $transactionSuccessStatuses)) {
-        $header = "Sweet Success!";
+        $header = "Thank you for helping to keep <em>the RAIL</em> ALIVE and FREE!";
         $icon = "success";
-        $message = "Your test transaction has been successfully processed. See the Braintree API response and try again.";
+        $message = "Your donation toward the Brooklyn Rail been successfully processed.";
     } else {
-        $header = "Transaction Failed";
+        $header = "Ooops! Transaction Failed";
         $icon = "fail";
-        $message = "Your test transaction has a status of " . $transaction->status . ". See the Braintree API response and try again.";
+        $message = "Your transaction has a status of " . $transaction->status . ". Try again or e-mail us at manager@brooklynrail.org";
     }
 
     $app->render('checkouts/show.php', [

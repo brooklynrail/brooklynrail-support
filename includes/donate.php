@@ -1,13 +1,3 @@
-<?php $clientToken = $this->data["client_token"]; 
-$supportPath = $this->data["support_path"];
-
-?>
-<html>
-<?php require_once("includes/head.php"); ?>
-<body>
-<?php require_once("includes/header.php"); ?>
-
-<<<<<<< HEAD
 <section id="donate">
   <div class="container">
     <div class="row">
@@ -16,7 +6,7 @@ $supportPath = $this->data["support_path"];
         <!-- Start Braintree -->
         <div class="wrapper">
           <div class="checkout">
-            <form method="post" id="payment-form" action="/">
+            <form method="post" id="payment-form" action="/<?= $supportPath ?>">
               <section>
                 <label for="amount">
                   <span class="input-label">Give $10, $25, $50 +</span>
@@ -24,20 +14,21 @@ $supportPath = $this->data["support_path"];
                     <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="25">
                   </div>
                 </label>
-
+ 
                 <div class="bt-drop-in-wrapper">
                   <div id="bt-dropin"></div>
                 </div>
               </section>
-=======
-<?php require_once("includes/content.php"); ?>
->>>>>>> master
 
-<?php require_once("includes/donate.php"); ?>
+              <input id="nonce" name="payment_method_nonce" type="hidden" />
+              <button class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
 
-<?php require_once("includes/newsletter.php"); ?>
-
-<?php require_once("includes/footer.php"); ?>
-
-</body>
-</html>
+              <p class="tos"><a title="Terms of Service" href="https://brooklynrail.org/terms-of-service">Terms of Service</a> | <a href="https://store.brooklynrail.org/store_web_pages/index/14" title="Privacy Policy">Privacy Policy</a>
+            </form>
+          </div>
+        </div>
+        <!-- end Braintree -->
+      </div>
+    </div>
+  </div>
+</section>
