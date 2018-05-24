@@ -35,7 +35,7 @@ $app->post('/', function () use ($app, $gateway) {
     ]);
 
     if($result->success || $result->transaction) {
-        $app->redirect('/' . $result->transaction->id);
+        $app->redirect('/support/' . $result->transaction->id);
     } else {
         $errorString = "";
 
@@ -44,7 +44,7 @@ $app->post('/', function () use ($app, $gateway) {
         }
 
         $_SESSION["errors"] = $errorString;
-        $app->redirect('/');
+        $app->redirect('/support/');
     }
 });
 
