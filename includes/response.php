@@ -13,7 +13,7 @@
               <hr/>
               <p><?php echo($transaction->createdAt->format('F j, Y'))?> at <?php echo($transaction->createdAt->format('g:i a'))?></p>
               <p>Transaction id: <?php echo($transaction->id)?></p>
-              <p>Name: [ <?php echo($transaction->customer->firstName)?> <?php echo($transaction->customer->lastName)?> ]</p>
+              <p class="hide">Name: [ <?php echo($transaction->customer->firstName)?> <?php echo($transaction->customer->lastName)?> ]</p>
               <p>Amount: $<?php echo($transaction->amount)?></p>
               <hr/>
               <p>Thank you</p>
@@ -29,6 +29,6 @@
         <a class="btn btn-lg btn-primary" href="https://brooklynrail.org/">Go to current issue</a>
       </div>
     </div>
-    
+
   </div>
 </section>

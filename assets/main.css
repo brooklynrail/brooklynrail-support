@@ -9,6 +9,10 @@ body {
   max-width: 960px;
 }
 
+.hide{
+  display: none;
+}
+
 #donate-prompt button {
   font-size: 30px;
 }
