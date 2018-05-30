@@ -15,13 +15,11 @@
     <?php if(isset($_SESSION["errors"])) : ?>
     <div class="row">
       <div class="col">
-        <div class="show notice error notice-error">
-          <span class="notice-message">
-            <?php
-            echo($_SESSION["errors"]);
-            unset($_SESSION["errors"]);
-            ?>
-          <span>
+        <div class="alert alert-danger">
+          <?php
+          echo($_SESSION["errors"]);
+          unset($_SESSION["errors"]);
+          ?>
         </div>
       </div>
     </div>
