@@ -38,7 +38,6 @@
         paypal: {
           flow: 'vault'
         },
-        venmo: {}
       }, function (createErr, instance) {
         form.addEventListener('submit', function (event) {
           event.preventDefault();
