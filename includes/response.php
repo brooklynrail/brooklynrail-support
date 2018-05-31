@@ -31,6 +31,13 @@
           </div>
         </div>
         <!-- end Braintree -->
+
+        <pre>
+          <?php print_r('======================'); ?>
+          <?php print_r($transaction); ?>
+          <?php print_r('======================'); ?>
+        </pre>
+        
       </div>
     </div>
 
