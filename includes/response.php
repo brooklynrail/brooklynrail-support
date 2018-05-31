@@ -14,12 +14,12 @@
               <p><?php echo($transaction->createdAt->format('F j, Y'))?> at <?php echo($transaction->createdAt->format('g:i a'))?></p>
               <p>Transaction id: <?php echo($transaction->id)?></p>
 
-              <?php if (strpos(json_encode($transaction), 'customer')) { ?>
-                <p>Name: <?php echo($transaction->customer['firstName']); ?> <?php echo($transaction->customer['lastName']); ?></p>
+              <?php if (@ $transaction->paypal['payerEmail']) { ?>
+                <p>PayPal: <?php echo($transaction->paypal['payerEmail'])?></p>
               <?php } ?>
 
-              <?php if (strpos(json_encode($transaction), 'paypal')) { ?>
-                <p>PayPal: <?php echo($transaction->paypal['payerEmail'])?></p>
+              <?php if (@ $transaction->venmoAccount['username']) { ?>
+                <p>Venmo: <?php echo($transaction->venmoAccount['username'])?></p>
               <?php } ?>
 
               <p>Amount: $<?php echo($transaction->amount)?></p>
@@ -27,10 +27,6 @@
               <hr/>
               <p>Thank you</p>
             </div>
-
-            <?php //print_r('======================'); ?>
-            <?php //print_r($transaction); ?>
-            <?php //print_r('======================'); ?>
 
           </div>
         </div>
