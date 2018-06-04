@@ -34,7 +34,8 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
         "paymentMethodNonce" => $app->request->post('payment_method_nonce'),
         'options' => [
             'submitForSettlement' => True
-        ]
+        ],
+        "deviceData" => post('device_data')
     ]);
 
     if($result->success || $result->transaction) {
