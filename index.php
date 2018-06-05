@@ -35,7 +35,7 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
         'options' => [
             'submitForSettlement' => True
         ],
-        "deviceData" => post('device_data')
+        "deviceData" => $_POST['device_data']
     ]);
 
     if($result->success || $result->transaction) {
