@@ -8,11 +8,11 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-    working_directory: ~/support
+    working_directory: ~/support-beta
     steps:
       - checkout
       - run: php composer.phar install
       - run: pwd
       - deploy:
           name: Deploy Over SSH
-          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/circleci.brooklynrail.org/html/support
+          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support-beta/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/circleci.brooklynrail.org/html/support-beta
