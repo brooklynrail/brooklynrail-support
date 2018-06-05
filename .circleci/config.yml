@@ -11,7 +11,8 @@ jobs:
     working_directory: ~/support
     steps:
       - checkout
-      - run: composer install
+      - run: php composer.phar install
+      - run: pwd
       - deploy:
           name: Deploy Over SSH
           command: scp -r -o StrictHostKeyChecking=no ~/support serveradmin%brooklynrail.org@brooklynrail.org:~/domains/circleci.brooklynrail.org/html/support
