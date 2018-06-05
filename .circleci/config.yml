@@ -15,4 +15,4 @@ jobs:
       - run: pwd
       - deploy:
           name: Deploy Over SSH
-          command: scp -r -o StrictHostKeyChecking=no ~/support serveradmin%brooklynrail.org@brooklynrail.org:~/domains/circleci.brooklynrail.org/html/support
+          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support serveradmin%brooklynrail.org@brooklynrail.org:~/domains/circleci.brooklynrail.org/html/support
