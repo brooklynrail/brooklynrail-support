@@ -14,9 +14,3 @@ jobs:
       - deploy:
           name: Deploy Over SSH
           command: scp -r -o StrictHostKeyChecking=no ~/support serveradmin%brooklynrail.org@brooklynrail.org:~/domains/circleci.brooklynrail.org/html/support
-
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build
