@@ -28,6 +28,9 @@
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.34.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.34.0/js/venmo.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.34.0/js/data-collector.min.js"></script>
     <script>
       var form = document.querySelector('#payment-form');
       var client_token = "<?php echo($client_token); ?>";
