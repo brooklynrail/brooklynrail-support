@@ -10,6 +10,7 @@
   <meta name="description" content="Keep the Rail alive and free! Support independent publishing." />
   <meta property="og:description" content="Keep the Rail alive and free! Support independent publishing." />
   <meta property="og:url" content="https://brooklynrail.org/donate/" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="https://brooklynrail.org/donate/assets/img/keep-the-rail-alive.png" />
   <meta property="og:site_name" content="The Brooklyn Rail" />
   <script type="application/ld+json">
