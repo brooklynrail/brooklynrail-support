@@ -9,8 +9,8 @@
   <meta property="og:locale" content="en_US" />
   <meta name="description" content="Keep the Rail alive and free! Support independent publishing." />
   <meta property="og:description" content="Keep the Rail alive and free! Support independent publishing." />
-  <meta property="og:url" content="/" />
-  <meta property="og:image" content="assets/img/quote.png" />
+  <meta property="og:url" content="https://brooklynrail.org/donate/" />
+  <meta property="og:image" content="https://brooklynrail.org/donate/assets/img/keep-the-rail-alive.png" />
   <meta property="og:site_name" content="The Brooklyn Rail" />
   <script type="application/ld+json">
   {"headline":"Support the Brooklyn Rail","description":"Keep the Rail alive and free! Support independent publishing.","name":"Support the Brooklyn Rail","@type":"WebSite","url":"/","@context":"http://schema.org"}</script>
