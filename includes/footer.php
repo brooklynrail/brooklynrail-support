@@ -86,6 +86,8 @@
           // At this point, you should access the deviceData value and provide it
           // to your server, e.g. by injecting it into your form as a hidden input.
           console.log('Got device data:', dataCollectorInstance.deviceData);
+          document.getElementById('deviceData').value = dataCollectorInstance.deviceData;
+
         });
 
         braintree.venmo.create({
