@@ -61,10 +61,12 @@
       // See: https://developers.braintreepayments.com/guides/venmo/client-side/javascript/v3#full-example
 
       var venmoButton = document.getElementById('venmo-button');
+      console.log('venmoButton');
+      console.log(venmoButton);
 
       // Create a client.
       braintree.client.create({
-        authorization: CLIENT_AUTHORIZATION
+        authorization: <?php echo($client_token); ?>
       }, function (clientErr, clientInstance) {
         // Stop if there was a problem creating the client.
         // This could happen if there is a network error or if the authorization
@@ -73,6 +75,8 @@
           console.error('Error creating client:', clientErr);
           return;
         }
+        console.log('braintree.client.create');
+
 
         braintree.dataCollector.create({
           client: clientInstance,
@@ -82,6 +86,8 @@
             // Handle error in creation of data collector.
             return;
           }
+
+          console.log('braintree.dataCollector.create');
 
           // At this point, you should access the deviceData value and provide it
           // to your server, e.g. by injecting it into your form as a hidden input.
