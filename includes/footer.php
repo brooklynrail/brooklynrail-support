@@ -66,7 +66,7 @@
 
       // Create a client.
       braintree.client.create({
-        authorization: <?php echo($client_token); ?>
+        authorization: client_token
       }, function (clientErr, clientInstance) {
         // Stop if there was a problem creating the client.
         // This could happen if there is a network error or if the authorization
