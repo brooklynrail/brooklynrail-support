@@ -5,7 +5,7 @@
       <div class="col-sm-12">
 
         <h1 id="logo"><a href="/?=support" title="Support the Brooklyn Rail">
-          <img src="/assets/img/brooklynrail.png" alt="the Brooklyn Rail">
+          <img src="https://brooklynrail.org/donate/assets/img/brooklynrail.png" alt="the Brooklyn Rail">
         </a></h1>
 
       </div>
