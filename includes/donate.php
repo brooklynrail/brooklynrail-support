@@ -14,11 +14,13 @@
                     <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="25">
                   </div>
                 </label>
- 
+
                 <div class="bt-drop-in-wrapper">
                   <div id="bt-dropin"></div>
                 </div>
               </section>
+
+              <input id="deviceData" name="deviceData" type="hidden" />
 
               <input id="nonce" name="payment_method_nonce" type="hidden" />
               <button class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
