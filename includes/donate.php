@@ -23,7 +23,11 @@
               <input id="deviceData" name="deviceData" type="hidden" />
 
               <input id="nonce" name="payment_method_nonce" type="hidden" />
-              <button class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
+              <button id="submit-button" class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
+              <div id="loader-box">
+                <div class="loader">Loading...</div>
+              </div>
+
             </form>
             <div class="meta">
               <p>The <em>Brooklyn Rail</em> is a nonprofit 501(c)(3) organization. Your donation is fully deductible. Donations are non-refundable. Questions? Email us at <a href="mailto:store@brooklynrail.org?subject=Donation%20Question">store@brooklynrail.org</a></p>
