@@ -33,6 +33,7 @@
     <script src="https://js.braintreegateway.com/web/3.34.0/js/data-collector.min.js"></script>
     <script>
       var form = document.querySelector('#payment-form');
+      var submitButton = document.querySelector('#submit-button');
       var client_token = "<?php echo($client_token); ?>";
 
       braintree.dropin.create({
@@ -49,13 +50,38 @@
           instance.requestPaymentMethod(function (err, payload) {
             if (err) {
               console.log('Error', err);
+              submitButton.setAttribute('disabled', true);
               return;
             }
-
             // Add the nonce to the form and submit
             document.querySelector('#nonce').value = payload.nonce;
             form.submit();
           });
+
+          // See documentation —
+          // https://developers.braintreepayments.com/guides/drop-in/customization/javascript/v3#events
+          // https://braintree.github.io/braintree-web-drop-in/docs/current/Dropin.html#event:paymentOptionSelected
+
+          if (instance.isPaymentMethodRequestable()) {
+            // This will be true if you generated the client token
+            // with a customer ID and there is a saved payment method
+            // available to tokenize with that customer.
+            submitButton.removeAttribute('disabled');
+          }
+
+          instance.on('paymentMethodRequestable', function (event) {
+            console.log(event.type); // The type of Payment Method, e.g 'CreditCard', 'PayPalAccount'.
+            console.log(event.paymentMethodIsSelected); // True if a customer has selected a payment method when paymentMethodRequestable fires.
+
+            // submitButton.removeAttribute('disabled');
+            submitButton.setAttribute('disabled', true);
+          });
+
+          instance.on('noPaymentMethodRequestable', function () {
+            console.log('nope');
+            submitButton.setAttribute('disabled', true);
+          });
+
         });
       });
 
