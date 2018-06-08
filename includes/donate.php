@@ -23,7 +23,7 @@
               <input id="deviceData" name="deviceData" type="hidden" />
 
               <input id="nonce" name="payment_method_nonce" type="hidden" />
-              <button class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
+              <button id="submit-button" class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
 
               <p class="tos"><a title="Terms of Service" href="https://brooklynrail.org/terms-of-service">Terms of Service</a> | <a href="https://store.brooklynrail.org/store_web_pages/index/14" title="Privacy Policy">Privacy Policy</a>
             </form>
