@@ -33,6 +33,11 @@
                   <div id="expiration-date" class="form-control hosted-field"></div>
                 </div>
 
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div id="email" class="form-control hosted-field"></div>
+                </div>
+
                 <input id="submit-button" class="button btn btn-primary btn-lg" type="submit" value="Pay" />
 
               </section>
