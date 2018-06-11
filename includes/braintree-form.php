@@ -6,6 +6,9 @@
         <!-- Start Braintree -->
         <div class="wrapper">
           <div class="checkout">
+
+
+            <!-- Braintree form -->
             <form method="post" id="payment-form" action="/<?= $supportPath ?>">
               <section>
                 <label for="amount">

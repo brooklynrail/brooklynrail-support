@@ -1,4 +1,4 @@
-<?php $clientToken = $this->data["client_token"]; 
+<?php $clientToken = $this->data["client_token"];
 $supportPath = $this->data["support_path"];
 
 ?>
@@ -9,7 +9,7 @@ $supportPath = $this->data["support_path"];
 
 <?php require_once("includes/content.php"); ?>
 
-<?php require_once("includes/donate.php"); ?>
+<?php require_once("includes/braintree-form.php"); ?>
 
 <?php require_once("includes/newsletter.php"); ?>
 
