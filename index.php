@@ -29,13 +29,18 @@ $app->get('/', function () use ($app, $gateway, $support_path) {
 
 $app->post('/', function () use ($app, $gateway, $support_path) {
 
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
     $result = $gateway->transaction()->sale([
         "amount" => $app->request->post('amount'),
         "paymentMethodNonce" => $app->request->post('payment_method_nonce'),
         'options' => [
             'submitForSettlement' => True
         ],
-        "deviceData" => $_POST['device_data']
+        "deviceData" => $_POST['device_data'],
+        'customer' => [
+          'email' => $email
+        ]
     ]);
 
     if($result->success || $result->transaction) {
