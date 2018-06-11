@@ -20,6 +20,8 @@
                 </div>
               </section>
 
+              <input id="email" class="form-control" name="email" type="email" />
+
               <input id="deviceData" name="deviceData" type="hidden" />
 
               <input id="nonce" name="payment_method_nonce" type="hidden" />
