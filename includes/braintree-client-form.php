@@ -45,8 +45,8 @@
 
             <div class="form-row">
               <div class="form-group col-sm-4">
-                <label for="postal-code">Zipcode</label>
-                <div id="postal-code" class="form-control hosted-field"></div>
+                <label for="postalCode">Zipcode</label>
+                <div id="postalCode" class="form-control hosted-field"></div>
                 <span class="helper-text"></span>
               </div>
             </div>
@@ -118,7 +118,11 @@
                   },
                   expirationDate: {
                     selector: '#expiration-date',
-                    placeholder: '10/2019'
+                    placeholder: '11/2020'
+                  },
+                  postalCode: {
+                    selector: '#postalCode',
+                    placeholder: '10014'
                   }
                 }
               }, function (hostedFieldsErr, hostedFieldsInstance) {
