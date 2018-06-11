@@ -9,7 +9,8 @@ $supportPath = $this->data["support_path"];
 
 <?php require_once("includes/content.php"); ?>
 
-<?php require_once("includes/braintree-form.php"); ?>
+<?php require_once("includes/braintree-dropin-form.php"); ?>
+<?php //require_once("includes/braintree-client-form.php"); ?>
 
 <?php require_once("includes/newsletter.php"); ?>
 

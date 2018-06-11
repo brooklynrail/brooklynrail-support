@@ -7,9 +7,9 @@
         <div class="wrapper">
           <div class="checkout">
 
-
             <!-- Braintree form -->
             <form method="post" id="payment-form" action="/<?= $supportPath ?>">
+
               <section>
                 <label for="amount">
                   <span class="input-label">Give $10, $25, $50 +</span>
@@ -18,9 +18,17 @@
                   </div>
                 </label>
 
-                <div class="bt-drop-in-wrapper">
-                  <div id="bt-dropin"></div>
-                </div>
+                <label for="card-number">Card Number</label>
+                <div id="card-number"></div>
+
+                <label for="cvv">CVV</label>
+                <div id="cvv"></div>
+
+                <label for="expiration-date">Expiration Date</label>
+                <div id="expiration-date"></div>
+
+                <input type="submit" value="Pay" disabled />
+
               </section>
 
               <input id="deviceData" name="deviceData" type="hidden" />
