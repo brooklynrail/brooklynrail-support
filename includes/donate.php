@@ -20,19 +20,46 @@
                 </div>
               </section>
 
-              <input id="email" class="form-control" name="email" type="email" />
+              <script type="text/javascript">
+                // Validate Email
+                function validatemail(mail) {
+                  console.log(mail);
+                  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                  if (mail.match(mailformat)) {
+                    console.log('valid');
+                    $('email').addClass('is-valid').focus();
+                    $('#submit-button').removeAttr('disabled');
+                    return true;
+                  } else {
+                    console.log('invalid');
+                    $('email').addClass('is-invalid').focus();
+                    $('#submit-button').prop('disabled', true);
+                    return false;
+                  }
+                }
+              </script>
+
+              <div id="email-receipt" class="row">
+                <div class="col-sm-12 col-md-8">
+                  <label for="">Email Address</label>
+                  <input id="email" class="form-control" placeholder="example@brooklynrail.org" name="email" type="email" onkeyup="validatemail(this.value)" />
+                  <span>Required</span>
+                </div>
+              </div>
+
+
 
               <input id="deviceData" name="deviceData" type="hidden" />
 
               <input id="nonce" name="payment_method_nonce" type="hidden" />
-              <button id="submit-button" class="button btn btn-primary btn-lg" type="submit"><span>Pay</span></button>
+              <button id="submit-button" class="button btn btn-primary btn-lg" type="submit" disabled><span>Pay</span></button>
               <div id="loader-box">
                 <div class="loader">Loading...</div>
               </div>
-
             </form>
+
             <div class="meta">
-              <p>The <em>Brooklyn Rail</em> is a nonprofit 501(c)(3) organization. Your donation is fully deductible. Donations are non-refundable. Questions? Email us at <a href="mailto:store@brooklynrail.org?subject=Donation%20Question">store@brooklynrail.org</a></p>
+              <p>The <em>Brooklyn Rail</em> is a nonprofit 501(c)(3) organization. Your donation is fully deductible. Donations are non-refundable. Questions? Email us at <a href="mailto:store@brooklynrail.org?subject=Donation%20Question">store@domain.org</a></p>
               <p><a href="https://brooklynrail.org/contact" title="Contact the Rail">Contact Us</a> | <a title="Terms of Service" href="https://brooklynrail.org/terms-of-service">Terms of Service</a> | <a href="https://store.brooklynrail.org/store_web_pages/index/14" title="Privacy Policy">Privacy Policy</a></p>
             </div>
 
