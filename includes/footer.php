@@ -28,8 +28,8 @@
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
 
-    <?php require_once("includes/braintree-dropin-scripts.php"); ?>
-    <?php // require_once("includes/braintree-client-scripts.php"); ?>
+    <?php // require_once("includes/braintree-dropin-scripts.php"); ?>
+    <?php require_once("includes/braintree-client-scripts.php"); ?>
 
 
     <!-- Google Analytics -->
