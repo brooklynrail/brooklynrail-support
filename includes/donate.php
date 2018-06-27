@@ -20,29 +20,10 @@
                 </div>
               </section>
 
-              <script type="text/javascript">
-                // Validate Email
-                function validatemail(mail) {
-                  console.log(mail);
-                  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                  if (mail.match(mailformat)) {
-                    console.log('valid');
-                    $('email').addClass('is-valid').focus();
-                    $('#submit-button').removeAttr('disabled');
-                    return true;
-                  } else {
-                    console.log('invalid');
-                    $('email').addClass('is-invalid').focus();
-                    $('#submit-button').prop('disabled', true);
-                    return false;
-                  }
-                }
-              </script>
-
               <div id="email-receipt" class="row">
                 <div class="col-sm-12 col-md-8">
                   <label for="">Email Address</label>
-                  <input id="email" class="form-control" placeholder="example@brooklynrail.org" name="email" type="email" onkeyup="validatemail(this.value)" />
+                  <input id="email" class="form-control" placeholder="example@brooklynrail.org" name="email" type="email" />
                   <span>Required</span>
                 </div>
               </div>
