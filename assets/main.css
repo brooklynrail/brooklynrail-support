@@ -380,3 +380,6 @@ footer .nav a:hover {
   margin-bottom: 10px;
   font-weight: 700;
 }
+#send-friend #email-body{
+  display: none;
+}

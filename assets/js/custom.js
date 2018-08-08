@@ -63,6 +63,7 @@
       var raw = $(this).val();
       var emails = raw.split(",");
       var valid = true;
+      $('#email-body').show();
       emails.forEach(function (email) {
         var v = validatemail(email.trim());
         if (v == false) {
@@ -86,7 +87,6 @@
       var href = encodeURI(string);
       return href;
     }
-
 
   });
 })(jQuery);
