@@ -1,3 +1,4 @@
 .env
+.env-sandbox
 node_modules/
 vendor
