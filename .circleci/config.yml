@@ -8,14 +8,14 @@ jobs:
   build:
     branches:
       only:
-        - master  
+        - beta
     docker:
       - image: circleci/php:7.1-node-browsers
-    working_directory: ~/donate
+    working_directory: ~/support-beta
     steps:
       - checkout
       - run: php composer.phar install
       - run: pwd
       - deploy:
           name: Deploy Over SSH
-          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/donate/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/donate
+          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support-beta/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support-beta
