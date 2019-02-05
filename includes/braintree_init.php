@@ -3,10 +3,9 @@ session_start();
 
 $dirname = basename(dirname(__DIR__, 1));
 
-
-if ($_SERVER['HTTP_HOST'] === 'local.work:3000'){
-  if(file_exists(__DIR__ . "/../.env")) {
-    $dotenv = new Dotenv\Dotenv(__DIR__ . "/../", ".env");
+if ($_SERVER['HTTP_HOST'] === 'localhost:8000'){
+  if(file_exists(__DIR__ . "/../.env-support-beta")) {
+    $dotenv = new Dotenv\Dotenv(__DIR__ . "/../", ".env-support-beta");
     $dotenv->load();
   }
 } else {
