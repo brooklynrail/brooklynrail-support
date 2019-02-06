@@ -71,6 +71,11 @@
 
               <div id="email-receipt" class="row">
                 <div class="col-sm-12 col-md-8">
+                  <label for="">Donation Type</label>
+                  <input id="donation_type" class="form-control" name="donation_type" type="text" value="More Poetry Readings" />
+                  <span>Required</span>
+                </div>
+                <div class="col-sm-12 col-md-8">
                   <label for="">Email Address</label>
                   <input id="email" class="form-control" placeholder="example@brooklynrail.org" name="email" type="email" onkeyup="validatemail(this.value)" />
                   <span>Required</span>
