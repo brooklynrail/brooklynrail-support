@@ -71,6 +71,14 @@
 
               <div id="email-receipt" class="row">
                 <div class="col-sm-12 col-md-8">
+                  <label for="">First Name / Last Name</label>
+                  <div class="input-group">
+                    <input id="first_name" class="form-control input_name" name="first_name" type="text" onkeyup="validatename(this.value, 'first_name')" />
+                    <input id="last_name" class="form-control input_name" name="last_name" type="text" onkeyup="validatename(this.value, 'last_name')" />
+                  </div>
+                  <span>Required</span>
+                </div>
+                <div class="col-sm-12 col-md-8">
                   <label for="">Email Address</label>
                   <input id="email" class="form-control" placeholder="example@brooklynrail.org" name="email" type="email" onkeyup="validatemail(this.value)" />
                   <span>Required</span>
