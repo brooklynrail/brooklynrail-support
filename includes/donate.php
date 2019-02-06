@@ -21,18 +21,48 @@
               </section>
 
               <script type="text/javascript">
+                var checks = {
+                  'email': false,
+                  'first_name': false,
+                  'last_name': false
+                }
+                // is full form valid
+                function isValid(){
+                  for(var i in checks){
+                    if(!checks[i]){
+                      $('#submit-button').prop('disabled', true);
+                      return false;
+                    }
+                  }
+                  $('#submit-button').removeAttr('disabled');
+                  return true;
+                }
                 // Validate Email
                 function validatemail(mail) {
                   console.log(mail);
                   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
                   if (mail.match(mailformat)) {
-                    console.log('valid');
                     $('email').addClass('is-valid').focus();
-                    $('#submit-button').removeAttr('disabled');
+                    checks['email'] = true;
+                    isValid();
                     return true;
                   } else {
-                    console.log('invalid');
+                    checks['email'] = false;
                     $('email').addClass('is-invalid').focus();
+                    $('#submit-button').prop('disabled', true);
+                    return false;
+                  }
+                }
+                function validatename(name, class_name) {
+                  console.log(name, class_name);
+                  if (name.length !== 0) {
+                    $(class_name).addClass('is-valid').focus();
+                    checks[class_name] = true;
+                    isValid();
+                    return true;
+                  } else {
+                    checks[class_name] = false;
+                    $(class_name).addClass('is-invalid').focus();
                     $('#submit-button').prop('disabled', true);
                     return false;
                   }
@@ -43,6 +73,14 @@
                 <div class="col-sm-12 col-md-8">
                   <label for="">Email Address</label>
                   <input id="email" class="form-control" placeholder="example@brooklynrail.org" name="email" type="email" onkeyup="validatemail(this.value)" />
+                  <span>Required</span>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <label for="">First Name / Last Name</label>
+                  <div class="input-group">
+                    <input id="first_name" class="form-control input_name" name="first_name" type="text" onkeyup="validatename(this.value, 'first_name')" />
+                    <input id="last_name" class="form-control input_name" name="last_name" type="text" onkeyup="validatename(this.value, 'last_name')" />
+                  </div>
                   <span>Required</span>
                 </div>
               </div>
