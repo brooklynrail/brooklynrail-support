@@ -39,7 +39,9 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
         ],
         "deviceData" => $_POST['device_data'],
         'customer' => [
-          'email' => $email
+          'email' => $email,
+          'firstName' => $app->request->post('first_name'),
+          'lastName' => $app->request->post('last_name'),
         ]
     ]);
 
