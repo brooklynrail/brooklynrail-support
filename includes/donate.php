@@ -53,7 +53,7 @@
                     return false;
                   }
                 }
-                function validatname(name, class_name) {
+                function validatename(name, class_name) {
                   console.log(name, class_name);
                   if (name.length !== 0) {
                     $(class_name).addClass('is-valid').focus();
