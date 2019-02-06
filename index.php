@@ -44,7 +44,7 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
           'lastName' => $app->request->post('last_name'),
         ],
         'customFields' => [
-          'donation_type' => $donation_type
+          'donation_type' => $app->request->post('donation_type')
         ]
     ]);
 
