@@ -19,6 +19,7 @@ jobs:
       - deploy:
           name: Deploy Over SSH
           command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support-beta/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support-beta
+
   master-build:
     branches:
       only:
