@@ -5,10 +5,7 @@
 version: 2
 
 jobs:
-  beta-build:
-    branches:
-      only:
-        - beta
+  deploy-beta:
     docker:
       - image: circleci/php:7.1-node-browsers
     working_directory: ~/support-beta
@@ -20,10 +17,7 @@ jobs:
           name: Deploy Over SSH
           command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support-beta/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support-beta
 
-  master-build:
-    branches:
-      only:
-        - master
+  deploy-master:
     docker:
       - image: circleci/php:7.1-node-browsers
     working_directory: ~/support
@@ -39,11 +33,11 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - beta-build:
+      - deploy-beta:
           filters:
             branches:
               only: beta
-      - master-build:
+      - deploy-master:
           filters:
             branches:
               only: master
