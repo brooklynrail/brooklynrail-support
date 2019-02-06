@@ -90,8 +90,6 @@
                 </div>
               </div>
 
-
-
               <input id="deviceData" name="deviceData" type="hidden" />
 
               <input id="nonce" name="payment_method_nonce" type="hidden" />
