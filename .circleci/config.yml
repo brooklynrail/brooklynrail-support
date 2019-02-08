@@ -5,10 +5,8 @@
 version: 2
 
 jobs:
-  build:
-    branches:
-      only:
-        - beta
+
+  deploy-beta:
     docker:
       - image: circleci/php:7.1-node-browsers
     working_directory: ~/support-beta
@@ -18,4 +16,35 @@ jobs:
       - run: pwd
       - deploy:
           name: Deploy Over SSH
-          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/support-beta/ serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support-beta
+          command: >
+            rsync -e "ssh -o StrictHostKeyChecking=no" -arvc \
+              --exclude .git ~/support-beta/ \
+              serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support-beta
+
+  deploy-master:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+    working_directory: ~/support
+    steps:
+      - checkout
+      - run: php composer.phar install
+      - run: pwd
+      - deploy:
+          name: Deploy Over SSH
+          command: >
+            rsync -e "ssh -o StrictHostKeyChecking=no" -arvc \
+              --exclude .git ~/support/ \
+              serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - deploy-beta:
+          filters:
+            branches:
+              only: beta
+      - deploy-master:
+          filters:
+            branches:
+              only: master
