@@ -37,7 +37,7 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
         'options' => [
             'submitForSettlement' => True
         ],
-        "deviceData" => $_POST['device_data'],
+        "deviceData" => $app->request->post('device_data'),
         'customer' => [
           'email' => $email,
           'firstName' => $app->request->post('first_name'),
