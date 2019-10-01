@@ -6,7 +6,7 @@
 
         <h1 id="logo">
           <a href="/?=support" title="Support the Brooklyn Rail">
-            <img src="/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
+            <img src="https://venice.brooklynrail.org/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
           </a>
         </h1>
 
