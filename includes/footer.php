@@ -34,7 +34,7 @@
     <script>
       var form = document.querySelector('#payment-form');
       var submitButton = document.querySelector('#submit-button');
-      var client_token = "<?php echo($client_token); ?>";
+      var client_token = "<?php echo @$client_token; ?>";
 
       braintree.dropin.create({
         authorization: client_token,
