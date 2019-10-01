@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
 }
 
 .hide{
@@ -143,14 +143,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 nav {
+  margin-top:1em;
   padding: 10px 0;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
+  border-top:2px #5d5d52 dotted;
+  border-bottom:2px #5d5d52 dotted;
+}
+
+@media (min-width: 768px) {
+  nav {
+    font-size: 20px;
+  }
 }
 
 nav a.nav-link {
   text-decoration: none;
-  color: #000;
+  color: #e52207;
   padding: 0;
   font-weight: 800;
   margin-right: 25px;
@@ -159,8 +168,15 @@ nav a.nav-link {
 
 nav a.nav-link:first-child {}
 nav a.nav-link:hover{
-  border-bottom: 2px #000 solid;
+  border-bottom: 1px #e52207 solid;
 }
+
+@media (min-width: 768px) {
+  nav a.nav-link:hover{
+    border-bottom: 2px #e52207 solid;
+  }
+}
+
 article header h1 {
   margin: 0;
   font-weight: 700;
@@ -180,7 +196,13 @@ article .entry-meta {
 }
 
 article .entry-content {
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 200;
+}
+@media (min-width: 768px) {
+  article .entry-content {
+    font-size: 32px;
+  }
 }
 
 article .entry-content h1 {
