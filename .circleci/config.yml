@@ -14,6 +14,7 @@ jobs:
       - checkout
       - run: php composer.phar install
       - run: pwd
+      - run: sudo apt install rsync
       - deploy:
           name: Deploy Over SSH
           command: >
