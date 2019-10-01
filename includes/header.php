@@ -4,9 +4,11 @@
     <div class="row">
       <div class="col-sm-12">
 
-        <h1 id="logo"><a href="/?=support" title="Support the Brooklyn Rail">
-          <img src="https://brooklynrail.org/donate/assets/img/brooklynrail.png" alt="the Brooklyn Rail">
-        </a></h1>
+        <h1 id="logo">
+          <a href="/?=support" title="Support the Brooklyn Rail">
+            <img src="/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
+          </a>
+        </h1>
 
       </div>
     </div>
