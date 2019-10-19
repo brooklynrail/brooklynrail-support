@@ -8,11 +8,31 @@
           <div class="checkout">
             <form method="post" id="payment-form" action="/<?= $supportPath ?>">
               <section>
-                <label for="amount">
-                  <span class="input-label">Give $10, $25, $50 +</span>
-                  <div class="input-wrapper amount-wrapper">
-                    <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="25">
+
+                <div class="amt-select">
+                  <h2>Select an Amount</h2>
+
+                  <ul>
+                    <li><button type="button" title="Donate $5" data-amt="5" data-gift="Any donation gets you 20% off items at our store." class="btn btn-outline-primary btn-lg">$5</button></li>
+                    <li><button type="button" title="Donate $25" data-amt="25" data-gift="Gift 123" class="btn btn-outline-primary btn-lg">$25</button></li>
+                    <li><button type="button" title="Donate $50" data-amt="50" data-gift="Gift 123" class="btn btn-outline-primary btn-lg active">$50</button></li>
+                    <li><button type="button" title="Donate $100" data-amt="100" data-gift="Gift 123" class="btn btn-outline-primary btn-lg">$100</button></li>
+                    <li><button type="button" title="Donate $250" data-amt="250" data-gift="Gift 123" class="btn btn-outline-primary btn-lg">$250</button></li>
+                    <li><button type="button" title="Donate $500" data-amt="500" data-gift="Gift 123" class="btn btn-outline-primary btn-lg">$500</button></li>
+                    <li><button type="button" title="Donate $1,000" data-amt="1000" data-gift="Gift 123" class="btn btn-outline-primary btn-lg">$1,000</button></li>
+                  </ul>
+                </div>
+
+                <label id="amount-field" for="amount">
+                  <span class="input-label">Select an amount</span>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input id="amount" name="amount" type="text" class="form-control form-control-lg" aria-label="Amount (to the nearest dollar)" value="50">
+                    <p class="gift"></p>
                   </div>
+
                 </label>
 
                 <div class="bt-drop-in-wrapper">
