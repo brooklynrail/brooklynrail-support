@@ -1,23 +1,21 @@
-<header id="header" class="">
-  <div class="container">
+<header>
+  <div class="grid-container grid-container-widescreen">
 
-    <div class="row">
-      <div class="col-sm-12">
-
+    <div class="grid-row">
+      <div class="grid-col-12">
         <h1 id="logo">
           <a href="/?=support" title="Support the Brooklyn Rail">
             <img src="https://venice.brooklynrail.org/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
           </a>
         </h1>
-
       </div>
     </div>
 
     <?php require_once("includes/nav.php"); ?>
 
     <?php if(isset($_SESSION["errors"])) : ?>
-    <div class="row">
-      <div class="col">
+    <div class="grid-row">
+      <div class="grid-col-12">
         <div class="alert alert-danger">
           <?php
           echo($_SESSION["errors"]);
