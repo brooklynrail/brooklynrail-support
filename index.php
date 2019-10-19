@@ -16,12 +16,8 @@ $app->config([
     'templates.path' => 'templates',
 ]);
 
-// $app->get('/', function () use ($app) {
-//     $app->redirect('/checkouts/');
-// });
-
 $app->get('/', function () use ($app, $gateway, $support_path) {
-    $app->render('checkouts/new.php', [
+    $app->render('checkouts/layout.php', [
         'support_path' => $support_path,
         'client_token' => $gateway->clientToken()->generate(),
     ]);
@@ -82,7 +78,7 @@ $app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $s
         $message = "Your transaction has a status of " . $transaction->status . ". <br/>Try again or e-mail us at manager@brooklynrail.org";
     }
 
-    $app->render('checkouts/show.php', [
+    $app->render('checkouts/confirmation.php', [
         'transaction' => $transaction,
         'header' => $header,
         'icon' => $icon,
