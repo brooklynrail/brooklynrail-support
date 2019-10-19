@@ -17,8 +17,7 @@
   {"headline":"Support the Brooklyn Rail","description":"Keep the Rail alive and free! Support independent publishing.","name":"Support the Brooklyn Rail","@type":"WebSite","url":"/","@context":"http://schema.org"}</script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/main.css?=20180608">
+  <link rel="stylesheet" href="assets/dist.css?2019">
 
   <!-- Libre Franklin + EB Garamond — Google Fonts -->
   <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i|Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
