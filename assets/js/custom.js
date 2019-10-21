@@ -33,6 +33,22 @@
       $("#support_popup").hide();
     });
 
+    // popup JS
+    // On click, change the amount that'll be donated
+    $( ".amt-select button" ).click(function(event) {
+      event.preventDefault();
+      change_selected($(this));
+      var current_btn = $(this);
+      var current_btn_amt = $(this).data('amt');
+      $('#amount').val(current_btn_amt);
+    });
+
+    function change_selected(el){
+      $('.amt-select button').each(function() {
+        $(this).removeClass('active');
+        $(el).addClass('active');
+      });
+    }
 
   });
 })(jQuery);

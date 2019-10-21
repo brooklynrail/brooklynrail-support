@@ -1,0 +1,12 @@
+body{
+  @include u-margin(0);
+  @include u-bg('red-50v');
+}
+
+.paper{
+  @include u-bg('white');
+}
+
+main{
+  @include u-margin-y(5);
+}

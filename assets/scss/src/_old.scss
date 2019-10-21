@@ -1,17 +1,4 @@
-body {
-  color: #000;
-  font-size: 16px;
-  font-family: "Libre Franklin", sans-serif;
-  background-color: #fff;
-}
 
-.container {
-  max-width: 1200px;
-}
-
-.hide{
-  display: none;
-}
 
 #donate-prompt button {
   font-size: 30px;
@@ -72,23 +59,23 @@ body {
 
 #donate {
   margin: 40px 0;
+  #braintree {
+    vertical-align: middle;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    p {
+      padding-top: 200px;
+      font-weight: 900;
+      font-size: 40px;
+      color: #ccc;
+    }
+  }
 }
 
-#donate #braintree {
-  vertical-align: middle;
-  text-align: center;
-}
 
-#donate #braintree img {
-  width: 100%;
-}
 
-#donate #braintree p {
-  padding-top: 200px;
-  font-weight: 900;
-  font-size: 40px;
-  color: #ccc;
-}
 
 #donate #email-receipt{
   margin-top: 30px;
@@ -131,25 +118,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
-#header {
-  padding-bottom: 40px;
-}
 
-#header #logo {
-  margin-top: 20px;
-}
-#header #logo img {
-  width: 100%;
-}
 
-nav {
-  margin-top:1em;
-  padding: 10px 0;
-  font-weight: 400;
-  font-size: 16px;
-  border-top:2px #5d5d52 dotted;
-  border-bottom:2px #5d5d52 dotted;
-}
+
 
 @media (min-width: 768px) {
   nav {
@@ -177,54 +148,54 @@ nav a.nav-link:hover{
   }
 }
 
-article header h1 {
+main header h1 {
   margin: 0;
   font-weight: 700;
   font-size: 36px;
   font-size: 2.25rem;
 }
 
-article header h6 {
+main header h6 {
   margin: 0 0 1em 0;
   font-weight: 300;
   font-size: 1.2rem;
 }
 
-article .entry-meta {
+main .entry-meta {
   font-style: italic;
   font-weight: 300;
 }
 
-article .entry-content {
+main .usa-prose {
   font-size: 24px;
   font-weight: 200;
 }
 @media (min-width: 768px) {
-  article .entry-content {
+  main .usa-prose {
     font-size: 32px;
   }
 }
 
-article .entry-content h1 {
+main .usa-prose h1 {
   display: none;
 }
 
-article .entry-content h2 {
+main .usa-prose h2 {
   font-size: 36px;
 }
 
-article .entry-content h3 {
+main .usa-prose h3 {
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-article .entry-content h4 {
+main .usa-prose h4 {
   font-size: 20px;
   font-weight: 700;
 }
 
-article .entry-content h5 {
+main .usa-prose h5 {
   font-size: 18px;
   font-weight: 700;
 }
@@ -246,21 +217,57 @@ pre code {
   padding: 0;
 }
 
+#payment-form .amt-select{
+}
+#payment-form .amt-select ul{
+  padding:0;
+  list-style-type: none;
+  display: flex;
+}
+
+#payment-form .amt-select h2{
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+#payment-form .amt-select .btn{
+  margin: 0 .375em;
+  padding: .375rem 1rem;
+  border:2px #e52207 solid;
+  border-radius: 3px;
+  color: #e52207;
+  font-size:21px;
+}
+#payment-form .amt-select ul li:first-of-type .btn{
+  margin-left:0;
+}
+#payment-form .amt-select .btn:hover{
+  background: #e52207;
+  color: #fff;
+}
+
+#payment-form .amt-select .active{
+  background: #e52207;
+  color: #fff;
+}
 
 #payment-form .input-label{
+  margin-bottom: .5em;
   font-weight: 800;
   font-size: 1.5rem;
+  display: block;
 }
 
-#payment-form .amount-wrapper{
-  margin-bottom: 15px;
-  font-weight: 800;
-  font-size: 1.5rem;
+#payment-form #amount-field .input-label {
+  display: none;
 }
-#payment-form .amount-wrapper input{
-  border:1px #333 solid;
-  padding: 3px 10px;
-  font-size: 1.5rem;
+
+#payment-form #amount{
+  color:#000;
+}
+#payment-form #amount-field .gift{
+  padding: 0 .75em;
+  font-size:16px;
 }
 
 .receipt{

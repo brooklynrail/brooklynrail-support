@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col">
+<div class="grid-row">
+  <div class="grid-col-12">
     <nav class="nav">
       <a class="nav-link" href="https://brooklynrail.org/?donate" title="Brooklyn Rail Issue">Home</a>
       <a class="nav-link" href="https://brooklynrail.org/subscribe/?donate" title="Subscribe to the Rail">Subscribe</a>
