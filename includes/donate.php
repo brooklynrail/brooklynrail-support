@@ -85,6 +85,8 @@
             }
           </script>
 
+          <input id="donation_type" class="form-control" name="donation_type" type="hidden" value="fundraiser-2019" />
+
           <div class="grid-row grid-gap-2">
             <div class="grid-col-6">
               <label class="usa-label" for="first_name">First name <span class="required">Required</span></label>
