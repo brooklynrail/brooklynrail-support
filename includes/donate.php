@@ -101,7 +101,7 @@
 
 
           <label class="usa-label" for="email">Email Address <span class="required">Required</span></label>
-          <input class="usa-input" id="email" name="last_naemailme" type="text" required aria-required="true" onkeyup="validatemail(this.value)">
+          <input class="usa-input" id="email" name="email" type="text" required aria-required="true" onkeyup="validatemail(this.value)">
 
         </section>
 
