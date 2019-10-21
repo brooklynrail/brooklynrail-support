@@ -21,10 +21,6 @@ $supportPath = $this->data["support_path"];
             <?php require_once("includes/donate.php"); ?>
           </div>
         </div>
-        <div class="grid-row grid-gap-4">
-          <div class="grid-col-12">
-          </div>
-        </div>
       </div>
     </main>
 
