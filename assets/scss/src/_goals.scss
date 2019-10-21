@@ -1,0 +1,25 @@
+.goals{
+  @include u-margin-bottom(3);
+  .progress-bar{
+    @include u-margin-bottom('105');
+    @include u-bg('base-lighter');
+    .progress{
+      @include u-bg('mint-40');
+      @include u-height(3);
+    }
+  }
+  p{
+    @include u-margin-y(2);
+    @include u-font('sans', 'xl');
+    @include u-text('normal');
+    @include u-color('base-darker');
+    span{
+      @include u-font('sans', 'sm');
+      @include u-text('normal');
+      @include u-color('base-darker');
+    }
+  }
+  .current_amt{
+    @include u-color('mint-40');
+  }
+}

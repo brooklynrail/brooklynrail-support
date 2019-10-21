@@ -1,13 +1,14 @@
 <header>
-  <div class="grid-container grid-container-widescreen">
-
+  <div class="grid-container">
     <div class="grid-row">
       <div class="grid-col-12">
-        <h1 id="logo">
-          <a href="/?=support" title="Support the Brooklyn Rail">
-            <img src="https://venice.brooklynrail.org/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
-          </a>
-        </h1>
+        <div id="header">
+          <h1>
+            <a href="/?=support" title="Support the Brooklyn Rail">
+              <img src="https://venice.brooklynrail.org/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
+            </a>
+          </h1>
+        </div>
       </div>
     </div>
 
