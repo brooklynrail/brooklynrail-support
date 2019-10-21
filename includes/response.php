@@ -21,9 +21,6 @@
     <p>Amount: $<?php echo($transaction->amount)?></p>
   </div>
 
-  <blockquote>“Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it is the only thing that ever has.”</blockquote>
-  <cite>— Margaret Mead</cite>
-
   <p>In solidarity with love, and courage,<br/>
     — Phong Bui & the Rail</p>
   <hr/>
