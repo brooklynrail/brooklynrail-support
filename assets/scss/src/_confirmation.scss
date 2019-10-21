@@ -5,7 +5,7 @@
     @include u-padding(4);
     @include u-bg('gray-warm-5');
   }
-  #meta{
+  .meta{
     @include u-font('sans', 'xs');
   }
   pre{
