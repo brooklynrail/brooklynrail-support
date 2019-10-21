@@ -1,4 +1,6 @@
-.response{
+#response{
+  @include u-font('sans', 'md');
+  @include u-text('light');
   pre{
     @include u-display('none');
   }

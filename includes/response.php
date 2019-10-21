@@ -1,4 +1,4 @@
-<div id="content" class="usa-prose">
+<div id="response" class="usa-prose">
   <!-- Start Braintree -->
   <h1><?php echo($header)?></h1>
   <p class="message"><?php echo($message)?></p>

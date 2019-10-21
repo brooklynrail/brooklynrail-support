@@ -72,7 +72,7 @@ $app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $s
      ];
 
     if (in_array($transaction->status, $transactionSuccessStatuses)) {
-        $header = "Thank you for helping to keep <em>the RAIL</em> ALIVE and FREE!";
+        $header = "Thank you for helping to keep the <em>Rail</em> Independent and Free";
         $icon = "success";
         $message = "Your donation toward the Brooklyn Rail been successfully processed.";
     } else {
