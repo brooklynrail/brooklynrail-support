@@ -1,6 +1,10 @@
 #response{
   @include u-font('sans', 'md');
   @include u-text('light');
+  .receipt{
+    @include u-padding(4);
+    @include u-bg('gray-warm-5');
+  }
   pre{
     @include u-display('none');
   }

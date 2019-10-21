@@ -10,13 +10,13 @@
     <main>
       <div class="grid-container grid-container-desktop-lg">
         <div class="grid-row grid-gap-4">
-          <div class="grid-col-12 tablet-lg:grid-col-7">
+          <div class="grid-col-12 tablet-lg:grid-col-8">
             <?php require_once("includes/response.php"); ?>
           </div>
         </div>
       </div>
     </main>
-    
+
     <?php require_once("includes/newsletter.php"); ?>
     <?php require_once("includes/footer.php"); ?>
 

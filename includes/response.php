@@ -1,26 +1,32 @@
 <div id="response" class="usa-prose">
   <!-- Start Braintree -->
-  <h1><?php echo($header)?></h1>
+  <h2><?php echo($header)?></h2>
   <p class="message"><?php echo($message)?></p>
 
   <div class="receipt">
-    <p><strong>The Brooklyn Rail</strong></p>
-    <hr/>
-    <p><?php echo($transaction->createdAt->format('F j, Y'))?> at <?php echo($transaction->createdAt->format('g:i a'))?></p>
-    <p>Transaction id: <?php echo($transaction->id)?></p>
 
-    <?php if (@ $transaction->paypal['payerEmail']) { ?>
-      <p>PayPal: <?php echo($transaction->paypal['payerEmail'])?></p>
-    <?php } ?>
+    <div class="receipt">
+      <p><strong>The Brooklyn Rail</strong></p>
 
-    <?php if (@ $transaction->venmoAccount['username']) { ?>
-      <p>Venmo: <?php echo($transaction->venmoAccount['username'])?></p>
-    <?php } ?>
+      <p><?php echo($transaction->createdAt->format('F j, Y'))?> at <?php echo($transaction->createdAt->format('g:i a'))?></p>
+      <p>Transaction id: <?php echo($transaction->id)?></p>
 
-    <p>Amount: $<?php echo($transaction->amount)?></p>
+      <?php if (@ $transaction->paypal['payerEmail']) { ?>
+        <p>PayPal: <?php echo($transaction->paypal['payerEmail'])?></p>
+      <?php } ?>
 
-    <hr/>
-    <p>Thank you</p>
+      <?php if (@ $transaction->venmoAccount['username']) { ?>
+        <p>Venmo: <?php echo($transaction->venmoAccount['username'])?></p>
+      <?php } ?>
+
+      <p>Amount: $<?php echo($transaction->amount)?></p>
+    </div>
+
+    <blockquote>“Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it is the only thing that ever has.”</blockquote>
+    <cite>— Margaret Mead</cite>
+
+    <p>In solidarity with love, and courage,<br/>
+      — Phong Bui & the Rail</p>
   </div>
 
   <!-- end Braintree -->
