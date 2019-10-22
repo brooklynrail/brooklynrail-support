@@ -8,5 +8,25 @@ body{
 }
 
 main{
-  @include u-margin-y(5);
+  @include u-margin-y(2);
+}
+
+
+.lead{
+  @include u-margin-bottom(5);
+  @include u-padding-y(3);
+  @include u-padding-bottom(4);
+  @include u-padding-x(3);
+  @include u-bg('mint-5');
+  p{
+    @include u-margin(0);
+    @include u-font('sans', 'xl');
+    @include u-text('normal');
+    @include u-text('center');
+    span{
+      // @include u-text('underline');
+      @include u-border-bottom('1px','base-dark', solid);
+      // @include u-text('red-50v');
+    }
+  }
 }

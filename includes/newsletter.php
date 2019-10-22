@@ -1,13 +1,13 @@
 <section id="newsletter">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-7">
+  <div class="grid-container">
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-7">
         <img class="cover" src="https://brooklynrail-web.imgix.net/issue/cover_image/191/br-sept-covers-final-2.jpg?w=200&q=80&fit=max" alt="">
         <h4>Sign-up for our newsletter</h4>
         <p>Be Cool. Be Informed. Be Present.</p>
         <p>Stay up to date with events and special releases between our monthly issues.</p>
       </div>
-      <div class="col-sm-12 col-md-5">
+      <div class="grid-col-12 tablet:grid-col-5">
         <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup">
           <form action="https://brooklynrail.us1.list-manage.com/subscribe/post?u=dfcd810ee6ea33002746a0f47&amp;id=a44895fefe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

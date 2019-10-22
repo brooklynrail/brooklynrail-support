@@ -1,0 +1,29 @@
+#newsletter {
+  padding: 40px 0;
+  background: #efefef;
+}
+
+#newsletter .asterisk {
+  color: red;
+}
+
+#newsletter .form-check {
+  padding: 0;
+}
+
+#newsletter h4 {
+  font-weight: 700;
+}
+
+#newsletter .cover {
+  margin-left: 12px;
+  width: 120px;
+  float: right;
+}
+
+@media (min-width: 768px) {
+  #newsletter .cover {
+    width: 150px;
+    float: right;
+  }
+}
