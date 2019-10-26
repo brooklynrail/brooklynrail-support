@@ -3,7 +3,7 @@
 	  <div class="grid-row grid-gap-4">
 	    <div class="grid-col-12 tablet-lg:grid-col-3">
         <a href="/">
-          <img class="logo" src="/assets/img/brooklynrail-logo-white.png" alt="The Brooklyn Rail" title="Brooklyn Rail Home" />
+          <img class="logo" src="assets/img/brooklynrail-logo-white.png" alt="The Brooklyn Rail" title="Brooklyn Rail Home" />
         </a>
         <p class="sub-head">Critical Perspectives on Art, Politics and Culture</p>
       </div>

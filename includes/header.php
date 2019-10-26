@@ -5,7 +5,7 @@
         <div id="header">
           <h1>
             <a href="/?=support" title="Support the Brooklyn Rail">
-              <img src="/assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
+              <img src="assets/img/brooklyn-rail-logo-2019-outline-red.svg" alt="The Brooklyn Rail Logo">
             </a>
           </h1>
         </div>
