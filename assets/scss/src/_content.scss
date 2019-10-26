@@ -1,4 +1,7 @@
 #content{
-  @include u-font('sans', 'lg');
+  @include u-font('sans', 'sm');
+  @include at-media('tablet') {
+    @include u-font('sans', 'md');
+  }
   @include u-text('light');
 }

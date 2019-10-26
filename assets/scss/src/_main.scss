@@ -19,15 +19,24 @@ main{
   p{
     @include u-margin(0);
     @include u-margin-bottom('105');
-    @include u-font('sans', 'md');
+    @include u-font('sans', 'sm');
     @include u-line-height('sans', 3);
+    @include u-text('center');
+    @include at-media('tablet') {
+      @include u-padding-x(6);
+      @include u-text('center');
+      @include u-font('sans', 'md');
+    }
     @include u-text('thin');
-    @include u-maxw('tablet-lg');
+    @include u-maxw('full');
     strong{
       @include u-text('medium');
     }
     span{
       @include u-border-bottom('2px','red-50v', 'dotted');
+    }
+    &:first-of-type{
+      @include u-font('sans', 'lg');
     }
   }
 }
