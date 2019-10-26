@@ -1,8 +1,8 @@
 <?php
 
-  $current_donations = '5500';
+  $current_donations = '5550';
   $goal = '50000';
-  $backers = '2';
+  $backers = '3';
 
   $percentChange = number_format(($current_donations / $goal) * 100, 0);
   $future = date_create("2019-12-31");

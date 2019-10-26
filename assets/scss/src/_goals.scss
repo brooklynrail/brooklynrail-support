@@ -10,7 +10,7 @@
     }
   }
   p{
-    @include u-margin-y(2);
+    @include u-margin-y('105');
     @include u-font('sans', 'xl');
     @include u-text('normal');
     @include u-color('base-darker');
