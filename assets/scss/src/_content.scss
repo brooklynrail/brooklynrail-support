@@ -1,7 +1,10 @@
 #content{
-  @include u-font('sans', 'sm');
+  @include u-font('serif', 'sm');
   @include at-media('tablet') {
-    @include u-font('sans', 'md');
+    @include u-font('serif', 'sm');
   }
   @include u-text('light');
+  a{
+    @include u-text('red-50v');
+  }
 }
