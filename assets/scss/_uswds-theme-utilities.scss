@@ -399,8 +399,8 @@ $opacity-settings: (
 );
 
 $order-settings: (
-  output:       false,
-  responsive:   false,
+  output:       true,
+  responsive:   true,
   active:       false,
   focus:        false,
   hover:        false,

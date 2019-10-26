@@ -13,20 +13,47 @@ main{
 
 
 .lead{
-  @include u-margin-bottom(5);
-  @include u-padding-y(3);
-  @include u-padding-bottom(4);
-  @include u-padding-x(3);
-  @include u-bg('mint-5');
+  @include u-margin-bottom(3);
+  .usa-prose{
+  }
   p{
     @include u-margin(0);
-    @include u-font('sans', 'xl');
-    @include u-text('normal');
-    @include u-text('center');
+    @include u-margin-bottom('105');
+    @include u-font('sans', 'lg');
+    @include u-text('thin');
+    @include u-maxw('tablet-lg');
+    strong{
+      @include u-text('medium');
+    }
     span{
-      // @include u-text('underline');
-      @include u-border-bottom('1px','base-dark', solid);
-      // @include u-text('red-50v');
+      @include u-border-bottom('2px','red-50v', 'dotted');
     }
   }
+}
+
+.page-top{}
+.page-content{
+  @include u-padding-y(0);
+  @include at-media('tablet') {
+    @include u-padding-y(5);
+    @include u-border-top('2px','base-dark', 'dotted');
+  }
+}
+
+
+.video-container {
+  @include u-margin-bottom(4);
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

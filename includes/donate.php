@@ -3,32 +3,16 @@
   <div class="wrapper">
     <div class="checkout">
       <form method="post" id="payment-form" action="/<?= $supportPath ?>">
-        <section class="amt-select">
-          <p class="label">Select a donation amount</p>
-          <div class="group">
-            <button type="button" title="Donate $5" data-amt="5"><strong>$5</strong></button>
-            <button type="button" title="Donate $25" data-amt="25"><strong>$25</strong></button>
-            <button type="button" title="Donate $50" data-amt="50"class="btn btn-outline-primary btn-lg active"><strong>$50</strong></button>
-            <button type="button" title="Donate $100" data-amt="100"><strong>$100</strong></button>
-            <button type="button" title="Donate $250" data-amt="250"><strong>$250</strong></button>
-          </div>
-          <div class="group">
-            <button type="button" title="Donate $500" data-amt="500"><strong>$500</strong></button>
-            <button type="button" title="Donate $1,000" data-amt="1000"><strong>$1,000</strong></button>
-          </div>
-
-          <label id="amount-field" for="amount">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">$</span>
-              </div>
-              <input id="amount" name="amount" type="text" class="form-control form-control-lg" aria-label="Amount (to the nearest dollar)" value="50">
-              <p class="gift"></p>
+        <p class="label">Your donation</p>
+        <label id="amount-field" for="amount">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
             </div>
-
-          </label>
-        </section>
-
+            <input id="amount" name="amount" type="text" class="form-control form-control-lg" aria-label="Amount (to the nearest dollar)" value="50">
+            <p class="gift"></p>
+          </div>
+        </label>
 
         <section class="braintree-payments">
           <div class="bt-drop-in-wrapper">
