@@ -16,6 +16,7 @@
   <script type="application/ld+json">
   {"headline":"Support the Brooklyn Rail","description":"Keep the Rail alive and free! Support independent publishing.","name":"Support the Brooklyn Rail","@type":"WebSite","url":"/","@context":"http://schema.org"}</script>
 
+
   <?php $cachetime = filemtime("assets/dist/styles.css"); ?>
   <!-- CSS -->
   <link rel="stylesheet" href="assets/dist/styles.css?<?= $cachetime ?>">
