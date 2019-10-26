@@ -23,9 +23,11 @@ main{
     @include u-line-height('sans', 3);
     @include u-text('center');
     @include at-media('tablet') {
-      @include u-padding-x(6);
+      @include u-margin-x('auto');
+      @include u-padding-x(15);
       @include u-text('center');
       @include u-font('sans', 'md');
+      @include u-maxw('tablet-lg');
     }
     @include u-text('thin');
     @include u-maxw('full');
@@ -36,6 +38,10 @@ main{
       @include u-border-bottom('2px','red-50v', 'dotted');
     }
     &:first-of-type{
+      @include at-media('tablet') {
+        @include u-padding-x(5);
+        @include u-maxw('full');
+      }
       @include u-font('sans', 'lg');
     }
   }
