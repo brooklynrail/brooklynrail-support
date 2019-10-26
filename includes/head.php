@@ -16,8 +16,9 @@
   <script type="application/ld+json">
   {"headline":"Support the Brooklyn Rail","description":"Keep the Rail alive and free! Support independent publishing.","name":"Support the Brooklyn Rail","@type":"WebSite","url":"/","@context":"http://schema.org"}</script>
 
+  <?php $cachetime = filemtime("assets/dist/styles.css"); ?>
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/dist/styles.css?2019">
+  <link rel="stylesheet" href="assets/dist/styles.css?<?= $cachetime ?>">
 
   <!-- Libre Franklin + EB Garamond — Google Fonts -->
   <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i|Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
