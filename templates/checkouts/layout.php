@@ -59,7 +59,6 @@ $supportPath = $this->data["support_path"];
       </section>
     </main>
 
-    <?php require_once("includes/newsletter.php"); ?>
     <?php require_once("includes/footer.php"); ?>
     <?php require_once("includes/scripts.php"); ?>
 
