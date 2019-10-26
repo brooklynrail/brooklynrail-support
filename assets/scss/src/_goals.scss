@@ -54,6 +54,7 @@
     .label{
       @include u-margin-top(0);
       @include u-font('sans', 'sm');
+      @include u-text('normal');
     }
     .group{
       @include u-display('flex');
