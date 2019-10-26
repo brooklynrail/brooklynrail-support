@@ -19,7 +19,8 @@ main{
   p{
     @include u-margin(0);
     @include u-margin-bottom('105');
-    @include u-font('sans', 'lg');
+    @include u-font('sans', 'md');
+    @include u-line-height('sans', 3);
     @include u-text('thin');
     @include u-maxw('tablet-lg');
     strong{
