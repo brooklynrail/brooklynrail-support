@@ -20,7 +20,7 @@ jobs:
           command: >
             rsync -e "ssh -o StrictHostKeyChecking=no" -arvc \
               --exclude .git ~/support-beta/ \
-              serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/support-beta
+              serveradmin%brooklynrail.org@s14056.gridserver.com:~/domains/brooklynrail.org/html/support-beta
 
   deploy-master:
     docker:
@@ -36,7 +36,7 @@ jobs:
           command: >
             rsync -e "ssh -o StrictHostKeyChecking=no" -arvc \
               --exclude .git ~/donate/ \
-              serveradmin%brooklynrail.org@brooklynrail.org:~/domains/brooklynrail.org/html/donate
+              serveradmin%brooklynrail.org@s14056.gridserver.com:~/domains/brooklynrail.org/html/donate
 
 workflows:
   version: 2

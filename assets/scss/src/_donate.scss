@@ -1,0 +1,198 @@
+#donate{
+  @include u-margin-top(0);
+  @include u-margin-bottom(5);
+  @include at-media('tablet-lg') {
+    @include u-padding('205');
+    @include u-bg('gray-warm-3');
+  }
+  #payment-form{
+    h2{
+      @include u-font('sans', 'md');
+    }
+    .label{
+      @include u-margin-top(0);
+      @include u-font('sans', 'sm');
+    }
+    label{
+      @include u-font('sans', 'sm');
+      .required{
+        @include u-font('sans', '3xs');
+        @include u-text('red-60v');
+        @include u-margin-left(2);
+      }
+    }
+    input{
+      @include u-padding-y('05');
+      @include u-padding-x(1);
+      @include u-radius('sm');
+      @include u-border('1px','base-light', solid);
+      @include u-font('sans', 'md');
+    }
+    .input-group{
+      @include u-margin-top(0);
+      @include u-margin-bottom(5);
+      @include u-display('flex');
+      @include u-font('sans', 'md');
+      @include u-text('normal');
+      .input-label{
+        @include u-font('sans', 'sm');
+      }
+
+      .input-group-prepend{
+        @include u-bg('base-lightest');
+        @include u-border('1px','base-light', solid);
+        @include u-border-right(0);
+        @include u-padding-x('105');
+        @include u-radius-left('md');
+        @include u-display('flex');
+        @include u-text('medium');
+        @include u-text('base-darker');
+        @include u-flex('row');
+        @include u-flex('align-center');
+        span{
+        }
+      }
+    }
+
+    .amt-select{
+      @include u-margin-bottom(5);
+      .group{
+        @include u-display('flex');
+        @include u-margin-bottom(1);
+        button{
+          @include u-margin-x('05');
+          @include u-padding-y('105');
+          @include u-padding-x(2);
+          @include u-display('block');
+          @include u-text('left');
+          @include u-font('sans', 'md');
+          @include u-color('base-dark');
+          @include u-radius('sm');
+          @include u-border('1px','base-light', solid);
+          &:first-child{
+            @include u-margin-left(0);
+          }
+          &:hover{
+            @include u-border('1px','mint-30', solid);
+            @include u-bg('mint-50');
+            @include u-color('white');
+          }
+        }
+        button.active{
+          @include u-bg('mint-40');
+          @include u-color('white');
+        }
+      }
+      #amount-field{
+        .input-group{
+          @include u-margin-top(3);
+        }
+      }
+      #amount{
+        @include u-padding-x(1);
+        @include u-radius-right('md');
+        @include u-radius-left(0);
+      }
+    }
+
+
+    #email-receipt{
+      .input-group{
+        label{
+          @include u-font('sans', 'sm');
+        }
+        input{
+          width:48%;
+          &:first-child{
+            @include u-margin-right('105');
+          }
+        }
+      }
+    }
+
+    #submit-button{
+      @include u-margin-y(3);
+      @include u-padding-y('105');
+      @include u-padding-x(3);
+      @include u-color('white');
+      @include u-bg('mint-50');
+      @include u-font('sans', 'md');
+      @include u-radius('md');
+      @include u-border(0);
+      &:disabled {
+        @include u-bg('base-light');
+      }
+    }
+
+    #loader-box{
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+    .loader{
+      display: none;
+    }
+    .show .loader{
+      display: block;
+    }
+    .loader,
+    .loader:after {
+      border-radius: 50%;
+      width: 3em;
+      height: 3em;
+    }
+    .loader {
+      margin: 14px auto;
+      font-size: 10px;
+      position: relative;
+      top:-4px;
+      text-indent: -9999em;
+      border-top: .3em solid rgba(0, 0, 0, 0.5);
+      border-right: .3em solid rgba(0, 0, 0, 0.5);
+      border-bottom: .3em solid rgba(0, 0, 0, 0.5);
+      border-left: .3em solid #ffffff;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation: load8 1.1s infinite linear;
+      animation: load8 1.1s infinite linear;
+    }
+    @-webkit-keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .meta{
+    @include u-font('sans', '3xs');
+    @include u-line-height('sans', 2);
+    @include u-padding-y(2);
+    @include u-padding-x(2);
+    @include u-bg('gray-warm-3');
+    @include at-media('tablet-lg') {
+      @include u-padding-x(0);
+    }
+    p{
+      @include u-margin-top(0);
+      &:last-child{
+        @include u-margin-bottom(0);
+      }
+    }
+  }
+}

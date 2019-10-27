@@ -16,12 +16,8 @@ $app->config([
     'templates.path' => 'templates',
 ]);
 
-// $app->get('/', function () use ($app) {
-//     $app->redirect('/checkouts/');
-// });
-
 $app->get('/', function () use ($app, $gateway, $support_path) {
-    $app->render('checkouts/new.php', [
+    $app->render('checkouts/layout.php', [
         'support_path' => $support_path,
         'client_token' => $gateway->clientToken()->generate(),
     ]);
@@ -42,6 +38,9 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
           'email' => $email,
           'firstName' => $app->request->post('first_name'),
           'lastName' => $app->request->post('last_name'),
+        ],
+        'customFields' => [
+          'donation_type' => $app->request->post('donation_type')
         ]
     ]);
 
@@ -73,7 +72,7 @@ $app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $s
      ];
 
     if (in_array($transaction->status, $transactionSuccessStatuses)) {
-        $header = "Thank you for helping to keep <em>the RAIL</em> ALIVE and FREE!";
+        $header = "Thank you for helping to keep the <em>Rail</em> Independent and Free";
         $icon = "success";
         $message = "Your donation toward the Brooklyn Rail been successfully processed.";
     } else {
@@ -82,7 +81,7 @@ $app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $s
         $message = "Your transaction has a status of " . $transaction->status . ". <br/>Try again or e-mail us at manager@brooklynrail.org";
     }
 
-    $app->render('checkouts/show.php', [
+    $app->render('checkouts/confirmation.php', [
         'transaction' => $transaction,
         'header' => $header,
         'icon' => $icon,

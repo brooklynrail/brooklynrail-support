@@ -1,0 +1,88 @@
+.goals{
+  @include u-margin-top(0);
+  @include u-margin-bottom(3);
+  .progress-bar{
+    @include u-margin-bottom('105');
+    @include u-bg('base-lighter');
+    .progress{
+      @include u-bg('mint-40');
+      @include u-height('205');
+      @include u-position('relative');
+    }
+    .progress:after {
+    	left: 100%;
+    	top: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	@include u-height('full');
+      @include u-width('full');
+      @include u-position('absolute');
+    	pointer-events: none;
+      @include u-border-left('mint-40');
+      border-width: 10px 0 10px 15px;
+    	margin-top: -10px;
+    }
+  }
+  p{
+    @include u-margin(0);
+    @include u-margin-bottom('105');
+    @include u-font('sans', 'xl');
+    @include u-line-height('sans', 2);
+    @include u-text('medium');
+    @include u-color('base-darker');
+    @include at-media('tablet') {
+      @include u-margin-bottom(2);
+    }
+    span{
+      @include u-font('sans', 'sm');
+      @include u-text('normal');
+      @include u-color('base-darker');
+      @include at-media('tablet') {
+        @include u-font('sans', 'md');
+      }
+    }
+  }
+  .current_amt{
+    @include u-color('mint-40');
+  }
+
+  .amt-select{
+    @include u-margin-y(3);
+    @include at-media('tablet') {
+      @include u-margin-y(5);
+    }
+    .label{
+      @include u-margin-top(0);
+      @include u-font('sans', 'sm');
+      @include u-text('normal');
+    }
+    .group{
+      @include u-display('flex');
+      @include u-flex('wrap');
+      @include u-left('neg-2px');
+      @include u-margin-bottom(1);
+      button{
+        @include u-margin-bottom(1);
+        @include u-margin-right(1);
+        @include u-padding-y(1);
+        @include u-padding-x(2);
+        @include u-display('block');
+        @include u-text('left');
+        @include u-font('sans', 'md');
+        @include u-color('base-dark');
+        @include u-radius('sm');
+        @include u-border('1px','base-light', solid);
+        &:hover{
+          @include u-border('1px','mint-50', solid);
+          @include u-bg('mint-40');
+          @include u-color('white');
+        }
+      }
+      button.active{
+        @include u-bg('mint-40');
+        @include u-border('1px','mint-50', solid);
+        @include u-color('white');
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#response{
+  @include u-font('sans', 'md');
+  @include u-text('light');
+  .receipt{
+    @include u-padding(4);
+    @include u-bg('gray-warm-5');
+  }
+  .meta{
+    @include u-font('sans', 'xs');
+  }
+  pre{
+    @include u-display('none');
+  }
+}
