@@ -1,10 +1,14 @@
 <?php
 
-  $current_donations = '5550';
-  $goal = '50000';
-  $backers = '3';
+  $json = './fundraiser.json';
+  $json_data = file_get_contents($json);
+  $goal_data = json_decode($json_data);
 
-  $percentChange = number_format(($current_donations / $goal) * 100, 0);
+  $donated = $goal_data[0]->donated;
+  $goal = $goal_data[0]->goal;
+  $backers = $goal_data[0]->backers;
+
+  $percentChange = number_format(($donated / $goal) * 100, 0);
   $future = date_create("2019-12-31");
   $now = date_create(date("Y/m/d"));
   $diff = date_diff($future,$now);
@@ -17,7 +21,7 @@
     <div class="progress" style="width:<?php echo $percentChange; ?>%"></div>
   </div>
 
-  <p class="current_amt">$<?php echo number_format($current_donations); ?> <span>donated out of $<?php echo number_format($goal); ?></span></p>
+  <p class="current_amt">$<?php echo number_format($donated); ?> <span>donated out of $<?php echo number_format($goal); ?></span></p>
   <p><?php echo $backers; ?> <span>donors</span></p>
   <p><?php echo $days_left; ?> <span>days remaining</span></p>
 
