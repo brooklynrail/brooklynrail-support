@@ -2,3 +2,7 @@
 .env*
 node_modules/
 vendor
+assets/fonts/merriweather
+assets/fonts/public-sans
+assets/fonts/roboto-mono
+assets/fonts/source-sans-pro
