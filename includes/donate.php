@@ -1,8 +1,9 @@
 <section id="donate">
   <!-- Start Braintree -->
+  <!-- Support path = <?= $supportPath ?> -->
   <div class="wrapper">
     <div class="checkout">
-      <form method="post" id="payment-form" action="/<?= $supportPath ?>">
+      <form method="post" id="payment-form" action="<?= $supportPath ?>">
         <p class="label">Your donation</p>
         <label id="amount-field" for="amount">
           <div class="input-group">
