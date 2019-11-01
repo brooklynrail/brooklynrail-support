@@ -12,7 +12,7 @@ if ($_SERVER['HTTP_HOST'] === 'localhost:3000'){
     $dotenv->load();
   }
 } else {
-  if(file_exists("../.env-donate")) {
+  if(file_exists(__DIR__ . "/../.env-donate")) {
     echo "yes";
     die();
     // $dotenv = new Dotenv\Dotenv(__DIR__ . "/../", ".env-donate");
