@@ -45,7 +45,7 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
     ]);
 
     if($result->success || $result->transaction) {
-        print_r("$support_path" . $result->transaction->id);
+        print_r(echo $_SERVER['REQUEST_URI'] . "$support_path" . $result->transaction->id);
         die();
         $app->redirect("$support_path" . $result->transaction->id);
     } else {
