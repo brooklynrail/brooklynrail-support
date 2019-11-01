@@ -45,7 +45,7 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
     ]);
 
     if($result->success || $result->transaction) {
-        $app->redirect("/$support_path" . $result->transaction->id);
+        $app->redirect("$support_path/" . $result->transaction->id);
     } else {
         $errorString = "";
 
@@ -54,7 +54,7 @@ $app->post('/', function () use ($app, $gateway, $support_path) {
         }
 
         $_SESSION["errors"] = $errorString;
-        $app->redirect("/$support_path");
+        $app->redirect("$support_path/");
     }
 });
 
