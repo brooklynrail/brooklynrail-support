@@ -4,9 +4,9 @@
   $json_data = file_get_contents($json);
   $goal_data = json_decode($json_data);
 
-  $donated = $goal_data[0]->donated;
-  $goal = $goal_data[0]->goal;
-  $backers = $goal_data[0]->backers;
+  $donated = $goal_data->donated;
+  $goal = $goal_data->goal;
+  $backers = $goal_data->backers;
 
   $percentChange = number_format(($donated / $goal) * 100, 0);
   $future = date_create("2019-12-31");
