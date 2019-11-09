@@ -25,7 +25,7 @@
         <ul>
           <li><a href="https://mailchi.mp/brooklynrail/join/?f">Sign up for our newsletter</a></li>
           <li><a href="/subscribe/?f">Subscribe</a></li>
-          <li><a href="/donate/?f">Donate</a></li>
+          <li><a href="https://donate.brooklynrail.org/?f">Donate</a></li>
           <li><a href="/advertise/?f">Advertise</a></li>
           <li><a href="/submissions/?f">Submissions</a></li>
         </ul>
