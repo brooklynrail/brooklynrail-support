@@ -75,18 +75,16 @@
           <div class="grid-row grid-gap-2">
             <div class="grid-col-6">
               <label class="usa-label" for="first_name">First name <span class="required">Required</span></label>
-              <input class="usa-input" id="first_name" name="first_name" type="text" required aria-required="true" onkeyup="validatename(this.value, 'first_name')">
+              <input autocomplete="off" class="usa-input" id="first_name" name="first_name" type="text" required aria-required="true" onkeyup="validatename(this.value, 'first_name')">
             </div>
             <div class="grid-col-6">
               <label class="usa-label" for="last_name">Last name <span class="required">Required</span></label>
-              <input class="usa-input" id="last_name" name="last_name" type="text" required aria-required="true" onkeyup="validatename(this.value, 'last_name')">
+              <input autocomplete="off" class="usa-input" id="last_name" name="last_name" type="text" required aria-required="true" onkeyup="validatename(this.value, 'last_name')">
             </div>
           </div>
 
-
-
           <label class="usa-label" for="email">Email Address <span class="required">Required</span></label>
-          <input class="usa-input" id="email" name="email" type="text" required aria-required="true" onkeyup="validatemail(this.value)">
+          <input autocomplete="off" class="usa-input" id="email" name="email" type="text" required aria-required="true" onkeyup="validatemail(this.value)">
 
         </section>
 
