@@ -3,9 +3,9 @@ header('content-type: application/json; charset=utf-8');
 header("access-control-allow-origin: *");
 
 $data = array(
-  "donated" => 28743,
+  "donated" => 29493,
   "goal" => 50000,
-  "backers" => 140,
+  "backers" => 139,
 );
 
 echo $_GET['callback'] . '('.json_encode($data).')';
