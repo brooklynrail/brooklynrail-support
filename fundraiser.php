@@ -15,7 +15,7 @@ $percentChange = number_format(($donated / $goal) * 100, 0);
 $future = date_create("2019-12-31");
 $now = date_create(date("Y/m/d"));
 $diff = date_diff($future,$now);
-$days_left = $diff->format("%a");
+$days_left = $diff->format("%a") + 1;
 
 $data = array(
   "donated" => $donated,
