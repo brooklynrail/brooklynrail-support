@@ -3,10 +3,10 @@ header('content-type: application/json; charset=utf-8');
 header("access-control-allow-origin: *");
 
 // Amount donated
-$donated = '30398';
+$donated = '31018';
 
 // Backers / Donors
-$backers = '145';
+$backers = '149';
 
 // Goal
 $goal = '50000';
