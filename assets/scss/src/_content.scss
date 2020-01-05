@@ -7,4 +7,11 @@
   a{
     @include u-text('red-50v');
   }
+  .newsletter{
+    @include u-margin-top(4);
+    @include u-padding-x('205');
+    @include u-padding-y(2);
+    @include u-bg('gray-warm-5');
+    @include u-font('sans', 'xs');
+  }
 }
