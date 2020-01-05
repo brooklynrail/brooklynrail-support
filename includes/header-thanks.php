@@ -1,7 +1,7 @@
 <section class="lead lead-thanks">
   <div class="grid-container grid-container-desktop-lg">
     <div class="grid-row">
-      <div class="grid-col-12">
+      <div class="grid-col-12 tablet-lg:grid-col-8 tablet-lg:grid-offset-2">
         <div class="usa-prose">
 
           <p>Thanks to the generous support of over 258 individual donors, we raised <strong>$<span>88,190</span></strong> by <strong><span>December 31st, 2019</span></strong>!</p>

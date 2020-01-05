@@ -39,7 +39,7 @@ main{
         @include u-maxw('full');
         @include u-margin-bottom(5);
       }
-      @include u-font('sans', 'xl');
+      @include u-font('sans', 'lg');
     }
     a{
       @include u-text('red-50v');
