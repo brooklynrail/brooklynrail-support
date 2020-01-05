@@ -4,11 +4,10 @@
       <div class="grid-col-12">
         <div class="usa-prose">
 
-          <p>Thanks to the generous support of over 258 individual donors, we raised <span>$88,190</span> by <span>December 31st, 2019</span>!</p>
+          <p>Thanks to the generous support of over 258 individual donors, we raised <strong>$<span>88,190</span></strong> by <strong><span>December 31st, 2019</span></strong>!</p>
 
-          <p>For over 19 years, individual donations from artists, writers, friends, and patrons have been integral to our independence.</p>
-
-          <p>Thank you for helping to <strong>keep the <em>Rail</em> independent and free.</strong></p>
+          <p>For over 19 years, individual donations from artists, writers, friends, and patrons have been integral to our independence. Thank you for helping to <strong>keep the <em>Rail</em> independent and free.</strong></p>
+          <p><strong><a href="https://mailchi.mp/brooklynrail/join/?donate_page">Sign up for our newsletter</a></strong> to learn about upcoming issues and projects in 2020.</p>
         </div>
       </div>
     </div>

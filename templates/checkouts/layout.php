@@ -25,22 +25,19 @@ $supportPath = $this->data["support_path"];
           </div>
         </div>
       </section>
+
       <section>
         <div class="grid-container grid-container-desktop-lg">
-          <div class="grid-row">
-            <div class="grid-col-12">
+          <div class="grid-row grid-gap-4">
+            <div class="grid-col-12 tablet-lg:grid-col-8 tablet-lg:grid-offset-2">
               <div class="page-content">
-                <div class="grid-row grid-gap-4">
-                  <div class="grid-col-12 tablet-lg:grid-col-8 tablet-lg:grid-offset-2">
-                    <?php require_once("includes/content.php"); ?>
-                  </div>
-
-                </div>
+                <?php require_once("includes/content.php"); ?>
               </div>
             </div>
           </div>
         </div>
       </section>
+
     </main>
 
     <?php require_once("includes/footer.php"); ?>

@@ -16,14 +16,14 @@ main{
   @include u-margin-bottom(3);
   p{
     @include u-margin(0);
-    @include u-margin-bottom('105');
+    @include u-margin-bottom(2);
     @include u-font('sans', 'sm');
     @include u-line-height('sans', 3);
     @include u-text('center');
     @include at-media('tablet') {
       @include u-margin-x('auto');
-      @include u-font('sans', 'lg');
-      @include u-maxw('desktop');
+      @include u-font('sans', 'md');
+      @include u-maxw('tablet-lg');
     }
     @include u-text('thin');
     @include u-maxw('full');
@@ -37,9 +37,12 @@ main{
     &:first-of-type{
       @include at-media('tablet') {
         @include u-maxw('full');
-        @include u-margin-bottom(3);
+        @include u-margin-bottom(5);
       }
       @include u-font('sans', 'xl');
+    }
+    a{
+      @include u-text('red-50v');
     }
   }
 }
