@@ -33,13 +33,7 @@
 
 <section class="goals">
 
-  <div class="progress-bar">
-    <div class="progress" style="width:<?php echo $percentChange; ?>%"></div>
-  </div>
-
-  <p class="current_amt">$<?php echo number_format($donated); ?> <span>donated out of $<?php echo number_format($goal); ?></span></p>
-  <p><?php echo $backers; ?> <span>donors</span></p>
-  <p><?php echo $days_left; ?> <span>days remaining</span></p>
+  
 
   <section class="amt-select">
     <p class="label">Select a donation amount</p>

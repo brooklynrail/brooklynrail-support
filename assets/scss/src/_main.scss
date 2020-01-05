@@ -39,10 +39,13 @@ main{
     }
     &:first-of-type{
       @include at-media('tablet') {
-        @include u-padding-x(5);
+        @include u-padding-x(3);
         @include u-maxw('full');
       }
       @include u-font('sans', 'lg');
+    }
+    a{
+      @include u-text('red-50v');
     }
   }
 }
