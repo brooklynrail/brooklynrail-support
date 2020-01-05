@@ -14,8 +14,6 @@ main{
 
 .lead{
   @include u-margin-bottom(3);
-  .usa-prose{
-  }
   p{
     @include u-margin(0);
     @include u-margin-bottom('105');
@@ -24,9 +22,7 @@ main{
     @include u-text('center');
     @include at-media('tablet') {
       @include u-margin-x('auto');
-      @include u-padding-x(15);
-      @include u-text('center');
-      @include u-font('sans', 'md');
+      @include u-font('sans', 'lg');
       @include u-maxw('desktop');
     }
     @include u-text('thin');
@@ -36,13 +32,14 @@ main{
     }
     span{
       @include u-border-bottom('2px','red-50v', 'dotted');
+      @include u-text('medium');
     }
     &:first-of-type{
       @include at-media('tablet') {
-        @include u-padding-x(5);
         @include u-maxw('full');
+        @include u-margin-bottom(3);
       }
-      @include u-font('sans', 'lg');
+      @include u-font('sans', 'xl');
     }
   }
 }
