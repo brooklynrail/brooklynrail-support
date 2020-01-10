@@ -71,7 +71,6 @@
             }
 
             var correctCaptcha = function(response) {
-              console.log('verify!');
               $.ajax({
                 type: "POST",
                 url: "captcha.php",
