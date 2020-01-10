@@ -74,7 +74,7 @@
               console.log('verify!');
               $.ajax({
                 type: "POST",
-                url: "mail.php",
+                url: "captcha.php",
                 data: {
                   captcha: grecaptcha.getResponse()
                 },
