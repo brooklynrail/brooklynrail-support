@@ -97,7 +97,7 @@
 
 
     #email-receipt{
-      @include u-margin-bottom('105');
+      @include u-margin-bottom(2);
       .input-group{
         label{
           @include u-font('sans', 'sm');
