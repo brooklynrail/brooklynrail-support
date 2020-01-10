@@ -78,6 +78,8 @@
                   captcha: grecaptcha.getResponse()
                 },
                 success: function() {
+                  console.log("response");
+                  console.log(response);
                   if(response.length !== 0){
                   } else {
                     checks['captcha'] = true;

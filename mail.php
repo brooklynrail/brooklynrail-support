@@ -15,15 +15,8 @@ curl_close($ch);
 $captcha_success=json_decode($verify);
 
 if ($captcha_success->success==false) {
-  $data = array(
-    "success" => false,
-  );
-  echo $_GET['callback'] . '('.json_encode($data).')';
 
 }
 else if ($captcha_success->success==true) {
-  $data = array(
-    "success" => true,
-  );
-  echo $_GET['callback'] . '('.json_encode($data).')';
+
 }
