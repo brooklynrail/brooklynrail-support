@@ -71,17 +71,15 @@
             }
 
             var correctCaptcha = function(response) {
+              console.log('verify!');
               $.ajax({
                 type: "POST",
-                url: "https://donate.brooklynrail.org/mail.php",
+                url: "mail.php",
                 data: {
                   captcha: grecaptcha.getResponse()
                 },
                 success: function() {
-                  console.log("response");
-                  console.log(response);
-                  if(response.length !== 0){
-                  } else {
+                  if(response.length > 0){
                     checks['captcha'] = true;
                     isValid();
                     return true;
