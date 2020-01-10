@@ -1,4 +1,7 @@
 <?php
+header('content-type: application/json; charset=utf-8');
+header("access-control-allow-origin: *");
+
 // ReCaptcha set up
 $secret="6LfHB84UAAAAACwdUwV66zn_R12MONau7XxDcY9E";
 $response=$_POST["captcha"];
@@ -12,10 +15,15 @@ curl_close($ch);
 $captcha_success=json_decode($verify);
 
 if ($captcha_success->success==false) {
-  //This user was not verified by recaptcha.
+  $data = array(
+    "success" => false,
+  );
+  echo $_GET['callback'] . '('.json_encode($data).')';
 
 }
 else if ($captcha_success->success==true) {
-  //This user is verified by recaptcha
-
+  $data = array(
+    "success" => true,
+  );
+  echo $_GET['callback'] . '('.json_encode($data).')';
 }
