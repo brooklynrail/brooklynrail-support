@@ -73,7 +73,7 @@
             var correctCaptcha = function(response) {
               $.ajax({
                 type: "POST",
-                url: "./mail.php",
+                url: "https://donate.brooklynrail.org/mail.php",
                 data: {
                   captcha: grecaptcha.getResponse()
                 },
