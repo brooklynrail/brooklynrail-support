@@ -11,9 +11,13 @@ curl_close($ch);
 
 $captcha_success=json_decode($verify);
 
-if ($captcha_success->success==false) {
+$error = array(
+  "error" => true,
+);
 
+if ($captcha_success->success==false) {
+  echo $_GET['callback'] . '('.json_encode($error).')';
 }
 else if ($captcha_success->success==true) {
-
+  echo $_GET['callback'] . '('.json_encode($captcha_success).')';
 }

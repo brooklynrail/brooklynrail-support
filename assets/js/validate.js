@@ -46,25 +46,28 @@ function validatename(name, class_name) {
 }
 
 
-function recaptchaCallback(response) {
-  console.log('captcha clicked');
-  console.log(response);
+function recaptchaCallback(data) {
   $captcha_url = "https://donate.brooklynrail.org/captcha.php";
+
+  var success = function(response){
+    if (response['success'] == true){
+      console.log('success');
+      checks['captcha'] = true;
+      isValid();
+      return true;
+    }
+  };
+
   $.ajax({
     type: "POST",
-    url: "/captcha.php",
+    url: "/captcha.php?callback=response",
     data: {
       captcha: grecaptcha.getResponse()
     },
-    success: function(data) {
-      if(response.length > 0){
-        checks['captcha'] = true;
-        isValid();
-        return true;
-      }
-    },
+    dataType: "jsonp",
+    success: success,
     error: function(){
-      console.log('captcha not verified');
+      console.log('captcha not veri');
     }
   });
 };
