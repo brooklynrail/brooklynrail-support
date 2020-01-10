@@ -1,7 +1,4 @@
 <?php
-header('content-type: application/json; charset=utf-8');
-header("access-control-allow-origin: *");
-
 // ReCaptcha set up
 $secret="6LfHB84UAAAAACwdUwV66zn_R12MONau7XxDcY9E";
 $response=$_POST["captcha"];
