@@ -1,6 +1,9 @@
 .goals{
-  @include u-margin-top(0);
+  @include u-margin-top(5);
   @include u-margin-bottom(3);
+  @include at-media('tablet') {
+    @include u-margin-top(0);
+  }
   .progress-bar{
     @include u-margin-bottom('105');
     @include u-bg('base-lighter');

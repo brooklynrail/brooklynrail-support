@@ -27,7 +27,8 @@
             var checks = {
               'email': false,
               'first_name': false,
-              'last_name': false
+              'last_name': false,
+              'captcha': false
             }
             // is full form valid
             function isValid(){
@@ -68,6 +69,25 @@
                 return false;
               }
             }
+
+            var correctCaptcha = function(response) {
+              $.ajax({
+                type: "POST",
+                url: "./mail.php",
+                data: {
+                  captcha: grecaptcha.getResponse()
+                },
+                success: function() {
+                  if(response.length !== 0){
+                  } else {
+                    checks['captcha'] = true;
+                    isValid();
+                    return true;
+                  }
+                }
+              });
+            };
+
           </script>
 
           <input id="donation_type" class="form-control" name="donation_type" type="hidden" value="fundraiser-2019" />
@@ -90,7 +110,11 @@
 
         <input id="deviceData" name="deviceData" type="hidden" />
 
+        <!-- reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="6LfHB84UAAAAALipt_TJ4FKP9wkB3P-ptF7TORUD" data-callback="correctCaptcha"></div>
+
         <input id="nonce" name="payment_method_nonce" type="hidden" />
+
         <button id="submit-button" class="button btn btn-primary btn-lg" type="submit" disabled><span>Pay</span></button>
 
         <div id="loader-box">
