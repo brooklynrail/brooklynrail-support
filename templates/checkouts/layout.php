@@ -25,15 +25,11 @@ $supportPath = $this->data["support_path"];
       <section class="page-top">
         <div class="grid-container grid-container-desktop-lg">
           <div class="grid-row grid-gap-4">
-            <div class="grid-col-12 tablet-lg:grid-col-7">
+            <div class="grid-col-12 tablet-lg:grid-col-8 tablet-lg:grid-offset-2">
               <div class="video-container">
                 <iframe width="650" height="365" src="https://www.youtube.com/embed/QeNzahu3ooE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <?php require_once("includes/content.php"); ?>
-            </div>
-            <div class="grid-col-12 tablet-lg:grid-col-5">
-              <?php require_once("includes/goals.php"); ?>
-              <?php require_once("includes/donate.php"); ?>
             </div>
           </div>
         </div>
