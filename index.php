@@ -1,92 +1,42 @@
-<?php
-require 'vendor/autoload.php';
-require_once("includes/braintree_init.php");
+<html>
+<?php require_once("includes/head.php"); ?>
 
-$gateway = new Braintree_Gateway([
-    'environment' => getenv('BT_ENVIRONMENT'),
-    'merchantId' => getenv('BT_MERCHANT_ID'),
-    'publicKey' => getenv('BT_PUBLIC_KEY'),
-    'privateKey' => getenv('BT_PRIVATE_KEY')
-]);
-$support_path = getenv('SUPPORT_PATH');
+<body>
+  <div class="paper">
 
-$app = new \Slim\Slim();
+    <?php require_once("includes/header.php"); ?>
 
-$app->config([
-    'templates.path' => 'templates',
-]);
+    <main>
+      <section class="lead">
+        <div class="grid-container grid-container-desktop-lg">
+          <div class="grid-row">
+            <div class="grid-col-12">
+              <div class="usa-prose">
+                <p>For over 19 years, individual donations from artists, writers, friends, and patrons have been integral to our independence. Please help to <strong>keep the <em>Rail</em> independent and free.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-top">
+        <div class="grid-container grid-container-desktop-lg">
+          <div class="grid-row grid-gap-4">
+            <div class="grid-col-12 tablet-lg:grid-col-8 tablet-lg:grid-offset-2">
+              <div class="video-container">
+                <iframe width="650" height="365" src="https://www.youtube.com/embed/QeNzahu3ooE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <?php require_once("includes/content.php"); ?>
+            </div>
+          </div>
+        </div>
+      </section>
 
-$app->get('/', function () use ($app, $gateway, $support_path) {
-    $app->render('checkouts/layout.php', [
-        'support_path' => $support_path,
-        'client_token' => $gateway->clientToken()->generate(),
-    ]);
-});
+    </main>
 
-$app->post('/', function () use ($app, $gateway, $support_path) {
+    <?php require_once("includes/footer.php"); ?>
+    <?php require_once("includes/scripts.php"); ?>
 
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+  </div>
+</body>
 
-    $result = $gateway->transaction()->sale([
-        "amount" => $app->request->post('amount'),
-        "paymentMethodNonce" => $app->request->post('payment_method_nonce'),
-        'options' => [
-            'submitForSettlement' => True
-        ],
-        "deviceData" => $app->request->post('device_data'),
-        'customer' => [
-          'email' => $email,
-          'firstName' => $app->request->post('first_name'),
-          'lastName' => $app->request->post('last_name'),
-        ],
-        'customFields' => [
-          'donation_type' => $app->request->post('donation_type')
-        ]
-    ]);
-
-    if($result->success || $result->transaction) {
-        $app->redirect($_SERVER['REQUEST_URI'] . $result->transaction->id);
-    } else {
-        $errorString = "";
-
-        foreach($result->errors->deepAll() AS $error) {
-            $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
-        }
-
-        $_SESSION["errors"] = $errorString;
-        $app->redirect("$support_path/");
-    }
-});
-
-$app->get('/:transaction_id', function ($transaction_id) use ($app, $gateway, $support_path) {
-    $transaction = $gateway->transaction()->find($transaction_id);
-
-    $transactionSuccessStatuses = [
-        Braintree\Transaction::AUTHORIZED,
-        Braintree\Transaction::AUTHORIZING,
-        Braintree\Transaction::SETTLED,
-        Braintree\Transaction::SETTLING,
-        Braintree\Transaction::SETTLEMENT_CONFIRMED,
-        Braintree\Transaction::SETTLEMENT_PENDING,
-        Braintree\Transaction::SUBMITTED_FOR_SETTLEMENT
-     ];
-
-    if (in_array($transaction->status, $transactionSuccessStatuses)) {
-        $header = "Thank you for helping to keep the <em>Rail</em> Independent and Free";
-        $icon = "success";
-        $message = "Your donation toward the Brooklyn Rail been successfully processed.";
-    } else {
-        $header = "Ooops! Transaction Failed";
-        $icon = "fail";
-        $message = "Your transaction has a status of " . $transaction->status . ". <br/>Try again or e-mail us at manager@brooklynrail.org";
-    }
-
-    $app->render('checkouts/confirmation.php', [
-        'transaction' => $transaction,
-        'header' => $header,
-        'icon' => $icon,
-        'message' => $message
-    ]);
-});
-
-$app->run();
+</html>
