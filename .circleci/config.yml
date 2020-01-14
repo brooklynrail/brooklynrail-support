@@ -12,7 +12,6 @@ jobs:
     working_directory: ~/support-beta
     steps:
       - checkout
-      - run: php composer.phar install
       - run: pwd
       - run: sudo apt install rsync
       - add_ssh_keys:
@@ -31,7 +30,6 @@ jobs:
     working_directory: ~/donate
     steps:
       - checkout
-      - run: php composer.phar install
       - run: pwd
       - run: sudo apt install rsync
       - deploy:
