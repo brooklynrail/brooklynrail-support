@@ -4,7 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Title tag -->
   <title>Donate to the Brooklyn Rail</title>
+
   <meta property="og:title" content="Support the Brooklyn Rail" />
   <meta property="og:locale" content="en_US" />
   <meta name="description" content="Help us reach $50,000 by the December 31, 2019 to keep the Rail independent and free!" />

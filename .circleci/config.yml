@@ -12,9 +12,11 @@ jobs:
     working_directory: ~/support-beta
     steps:
       - checkout
-      - run: php composer.phar install
       - run: pwd
       - run: sudo apt install rsync
+      - add_ssh_keys:
+          fingerprints:
+              - "04:84:bc:6d:f4:2d:7c:dc:f8:26:1b:67:70:59:80:fb"
       - deploy:
           name: Deploy Over SSH
           command: >
@@ -28,7 +30,6 @@ jobs:
     working_directory: ~/donate
     steps:
       - checkout
-      - run: php composer.phar install
       - run: pwd
       - run: sudo apt install rsync
       - deploy:
@@ -36,7 +37,7 @@ jobs:
           command: >
             rsync -e "ssh -o StrictHostKeyChecking=no" -arvc \
               --exclude .git ~/donate/ \
-              serveradmin%brooklynrail.org@s14056.gridserver.com:~/domains/brooklynrail.org/html/donate
+              serveradmin%s228460.gridserver.com@s228460.gridserver.com:~/domains/s228460.gridserver.com/html/
 
 workflows:
   version: 2
