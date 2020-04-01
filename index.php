@@ -28,8 +28,7 @@
 
               <?php require_once("includes/content.php"); ?>
               <?php require_once("includes/checkout.php"); ?>
-              
-              ?>
+
             </div>
           </div>
         </div>
